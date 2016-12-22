@@ -46,7 +46,7 @@ public class StrangeBrew {
     }
 
     private static void invokeGUI(String[] args) {
-        SplashWindow.splash(StrangeBrew.class.getResource("splash.gif"));
+        SplashWindow.splash(StrangeBrew.class.getResource("/splash.gif"));
         SplashWindow.invokeMain("StrangeSwing", args);
         SplashWindow.disposeSplash();
     }
