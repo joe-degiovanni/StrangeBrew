@@ -20,6 +20,7 @@ import ca.strangebrew.WebServer;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.logging.Logger;
 
 
 public class StrangeBrew {
@@ -30,6 +31,7 @@ public class StrangeBrew {
      */
     private static Options opts;
 
+    private static Logger logger = Logger.getLogger(StrangeBrew.class.getName());
 
     public static void main(String[] args) {
         opts = Options.getInstance();
@@ -104,7 +106,7 @@ public class StrangeBrew {
         }
 
 
-        System.out.println("Checking for webserver");
+        logger.info("Checking for webserver");
         // Startup the WebServer if it's requested (this'll be set to on for now)
         if (opts.getBProperty("optWebServer")) {
 
@@ -120,7 +122,7 @@ public class StrangeBrew {
             serverThread.start();
 
         }
-        System.out.println("Server started");
+        logger.info("Server started");
 
 
         SplashWindow.splash(StrangeBrew.class.getResource("splash.gif"));
