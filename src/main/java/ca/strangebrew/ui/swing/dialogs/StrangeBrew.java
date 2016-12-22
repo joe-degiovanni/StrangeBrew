@@ -36,27 +36,31 @@ public class StrangeBrew {
     public static void main(String[] args) {
         opts = Options.getInstance();
 
-        // check if this is a mac/osx machine, and deal accordingly
-        String lcOSName = System.getProperty("os.name").toLowerCase();
-        Debug.print("OS is: " + lcOSName);
-        //Debug.flush();
+        configureMacintoshProperties();
+        setDebugMode(args);
+        setDefaultExceptionHandler();
+        configureLookAndFeel();
+        initWebserver();
 
-        // Manually add extras, until I can find out why the L&F manager doesn't find it.
-        UIManager.installLookAndFeel("Synthetica", "de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel");
+        invokeGUI(args);
+    }
 
-        if (lcOSName.indexOf("mac") > -1) {
-            System.setProperty("apple.laf.useScreenMenuBar", "true");
-            System.setProperty("com.apple.mrj.application.apple.menu.about.name", "StrangeBrew");
-        }
+    private static void invokeGUI(String[] args) {
+        SplashWindow.splash(StrangeBrew.class.getResource("splash.gif"));
+        SplashWindow.invokeMain("StrangeSwing", args);
+        SplashWindow.disposeSplash();
+    }
 
-        // Set the default exception handler, there's a lot of places where errors are not caught
+    private static void setDebugMode(String[] args) {
         if (args.length > 0) {
             // Are we in debug mode?
             if (args[0].equals("-d")) {
                 Debug.set(true);
             }
         }
+    }
 
+    private static void setDefaultExceptionHandler() {
         //Not the cleanest, but it'll do as a backup until I can fix stuff.
         Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
             public void uncaughtException(Thread t, Throwable e) {
@@ -66,7 +70,21 @@ public class StrangeBrew {
 
             }
         });
+    }
 
+    private static void configureMacintoshProperties() {
+        // check if this is a mac/osx machine, and deal accordingly
+        String lcOSName = System.getProperty("os.name").toLowerCase();
+        Debug.print("OS is: " + lcOSName);
+        //Debug.flush();
+
+        if (lcOSName.indexOf("mac") > -1) {
+            System.setProperty("apple.laf.useScreenMenuBar", "true");
+            System.setProperty("com.apple.mrj.application.apple.menu.about.name", "StrangeBrew");
+        }
+    }
+
+    private static void configureLookAndFeel() {
         // What fonts do we have
         //String cFront = GraphicsEnvironment.getLocalGraphicsEnvironment().
         String[] fList = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
@@ -82,7 +100,6 @@ public class StrangeBrew {
             // Lets try to get the look and feel running nicely.
             try {
                 // check for a option first
-
                 String appearance = opts.getProperty("optAppearance");
 
                 if (appearance == null) {
@@ -101,11 +118,10 @@ public class StrangeBrew {
             } catch (IllegalAccessException e) {
                 // handle exception
             }
-        } else {
-
         }
+    }
 
-
+    private static void initWebserver() {
         logger.info("Checking for webserver");
         // Startup the WebServer if it's requested (this'll be set to on for now)
         if (opts.getBProperty("optWebServer")) {
@@ -123,11 +139,6 @@ public class StrangeBrew {
 
         }
         logger.info("Server started");
-
-
-        SplashWindow.splash(StrangeBrew.class.getResource("splash.gif"));
-        SplashWindow.invokeMain("StrangeSwing", args);
-        SplashWindow.disposeSplash();
     }
 
 }
