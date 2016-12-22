@@ -24,81 +24,6 @@
 
 package ca.strangebrew.ui.swing;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dialog;
-import java.awt.FlowLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyVetoException;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.text.DateFormat;
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Locale;
-
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.ComboBoxModel;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFileChooser;
-import javax.swing.JFormattedTextField;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JSeparator;
-import javax.swing.JSpinner;
-import javax.swing.JTabbedPane;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JToolBar;
-import javax.swing.KeyStroke;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.SwingUtilities;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.LineBorder;
-import javax.swing.border.TitledBorder;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
-import javax.swing.table.TableColumnModel;
-
-import net.sf.wraplog.AbstractLogger;
-import net.sf.wraplog.SystemLogger;
 import ca.strangebrew.BrewCalcs;
 import ca.strangebrew.Database;
 import ca.strangebrew.Debug;
@@ -131,13 +56,50 @@ import ca.strangebrew.ui.swing.dialogs.PrintDialog;
 import ca.strangebrew.ui.swing.dialogs.RefractometerDialog;
 import ca.strangebrew.ui.swing.dialogs.RemoteRecipes;
 import ca.strangebrew.ui.swing.dialogs.ScaleRecipeDialog;
-
-import com.michaelbaranov.microba.calendar.DatePicker;
-
 import edu.stanford.ejalbert.BrowserLauncher;
-import edu.stanford.ejalbert.exception.BrowserLaunchingExecutionException;
 import edu.stanford.ejalbert.exception.BrowserLaunchingInitializingException;
 import edu.stanford.ejalbert.exception.UnsupportedOperatingSystemException;
+import net.sf.wraplog.AbstractLogger;
+import net.sf.wraplog.SystemLogger;
+
+import javax.swing.*;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.sql.Date;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Locale;
 
 public class StrangeSwing extends javax.swing.JFrame implements ActionListener, FocusListener, WindowListener,
 		ChangeListener {
@@ -323,7 +285,7 @@ public class StrangeSwing extends javax.swing.JFrame implements ActionListener, 
 
 	final private JTextArea txtComments = new JTextArea();
 	// private JFormattedTextField txtDate;
-	final private DatePicker txtDate = new DatePicker();
+	final private JTextField txtDate = new JTextField();
 	final private JTextField txtName = new JTextField();
 	final private JFormattedTextField preBoilText = new JFormattedTextField();
 	final private JButton printButton = new JButton();
@@ -610,11 +572,7 @@ public class StrangeSwing extends javax.swing.JFrame implements ActionListener, 
 		lblIBUvalue.setText(SBStringUtils.format(myRecipe.getIbu(), 1));
 		lblColourValue.setText(SBStringUtils.format(myRecipe.getColour(), 1));
 		lblAlcValue.setText(SBStringUtils.format(myRecipe.getAlcohol(), 1));
-		try {
-			txtDate.setDate(myRecipe.getCreated().getTime());
-		} catch (PropertyVetoException e) {
-			e.printStackTrace();
-		}
+		txtDate.setText(myRecipe.getCreated().getTime().toString());
 		// setText(SBStringUtils.dateFormat1.format(myRecipe.getCreated().getTime()));
 		Costs = SBStringUtils.myNF.format(myRecipe.getTotalMaltCost());
 		tblMaltTotalsModel.setDataVector(new String[][] { { "", "", "Totals:",
@@ -1032,7 +990,7 @@ public class StrangeSwing extends javax.swing.JFrame implements ActionListener, 
 									0, 0));
 							// txtDate.setText("Date");
 							txtDate.setPreferredSize(new java.awt.Dimension(73, txtDate.getFont().getSize()*2));
-							txtDate.setDateFormat(DateFormat.getDateInstance(DateFormat.SHORT));
+//							txtDate.setDateFormat(DateFormat.getDateInstance(DateFormat.SHORT));
 							txtDate.setLocale(preferences.getLocale());
 						}
 						{
@@ -2003,7 +1961,7 @@ public class StrangeSwing extends javax.swing.JFrame implements ActionListener, 
 					f2.setPppg(f.getPppg());
 					f2.setDescription(f.getDescription());
 					f2.setMashed(f.getMashed());
-					f2.setSteep(f.getSteep());
+					f2.setSteeped(f.getSteeped());
 					f2.setCost(f.getCostPerU());
 				}
 				SwingUtilities.invokeLater(new Runnable() {
@@ -2051,7 +2009,7 @@ public class StrangeSwing extends javax.swing.JFrame implements ActionListener, 
 				displayRecipe();
 			}
 		} else if (o == txtDate) {
-			java.util.Date newDate = txtDate.getDate();
+			java.util.Date newDate = Date.valueOf(txtDate.getText());
 			java.util.Date oldDate = myRecipe.getCreated().getTime();
 			if (!oldDate.equals(newDate)) {
 				myRecipe.setCreated(newDate);

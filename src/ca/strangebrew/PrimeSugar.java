@@ -16,4 +16,8 @@ public class PrimeSugar extends Ingredient {
 	public void setYield(double attenuation) {
 		this.yield = attenuation;
 	}
+
+	public String toXML() {
+		return "";
+	}
 }

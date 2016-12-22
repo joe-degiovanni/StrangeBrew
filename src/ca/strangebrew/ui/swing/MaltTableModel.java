@@ -3,16 +3,14 @@
  */
 package ca.strangebrew.ui.swing;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
-import javax.swing.table.AbstractTableModel;
-
 import ca.strangebrew.Debug;
 import ca.strangebrew.Fermentable;
-import ca.strangebrew.Options;
 import ca.strangebrew.Recipe;
 import ca.strangebrew.SBStringUtils;
+
+import javax.swing.table.AbstractTableModel;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 
 class MaltTableModel extends AbstractTableModel {
@@ -142,9 +140,9 @@ class MaltTableModel extends AbstractTableModel {
 						data.setMaltPppg(row, m.getPppg());
 						Debug.print("Setting value from name: " + m.getLov());
 						data.setMaltLov(row, m.getLov());
-						data.setMaltSteep(row, m.getSteep());
+						data.setMaltSteep(row, m.getSteeped());
 						data.setMaltMashed(row, m.getMashed());
-						data.setMaltFerments(row, m.ferments());	
+						data.setMaltFerments(row, m.getFermentable());
 					}
 					break;
 				case 3 :

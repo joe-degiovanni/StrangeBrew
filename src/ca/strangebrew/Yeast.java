@@ -14,5 +14,10 @@ public class Yeast extends Ingredient {
 	public Yeast(){
 		// setName("A yeast");
 	}
-	
+
+	@Override
+	public String toXML() {
+		return "";
+	}
+
 }

@@ -1,9 +1,10 @@
 package ca.strangebrew;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-import org.json.simple.JSONObject;
 
 /**
  * $Id: Mash.java,v 1.37 2008/01/16 17:55:04 jimcdiver Exp $
@@ -1082,7 +1083,7 @@ public class Mash {
 	     JSONObject mashObject = new JSONObject();
 	     
 	     for (int i = 0; i < steps.size(); i++) {
-	            MashStep st = (MashStep) steps.get(i);
+	            MashStep st = steps.get(i);
 	            JSONObject currentStep = new JSONObject();
 	            currentStep.put("type", st.type);
 	            currentStep.put("method", st.method);
@@ -1090,7 +1091,7 @@ public class Mash {
 	            currentStep.put("duration", st.minutes);
 	            currentStep.put("tempUnit", this.tempUnits);
 	            currentStep.put("position", i);
-	            mashObject.put(i, currentStep);
+	            mashObject.put(""+i, currentStep);
 	     }
 	     
 	     if (device != null) {

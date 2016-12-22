@@ -13,67 +13,23 @@
 
 package ca.strangebrew.ui.swing.dialogs;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dialog;
-import java.awt.FlowLayout;
-import java.awt.Frame;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import java.awt.Insets;
+import ca.strangebrew.Database;
+import ca.strangebrew.Debug;
+import ca.strangebrew.Fermentable;
+import ca.strangebrew.Options;
+import ca.strangebrew.ui.swing.StrangeSwing;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Locale;
-
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.ComboBoxModel;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JSpinner;
-import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.ScrollPaneLayout;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.TitledBorder;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-
-import ca.strangebrew.BrewCalcs;
-import ca.strangebrew.Database;
-import ca.strangebrew.Debug;
-import ca.strangebrew.Fermentable;
-import ca.strangebrew.Hop;
-import ca.strangebrew.Options;
-import ca.strangebrew.Quantity;
-import ca.strangebrew.WaterProfile;
-import ca.strangebrew.ui.swing.ComboModel;
-import ca.strangebrew.ui.swing.SmartComboBox;
-import ca.strangebrew.ui.swing.StrangeSwing;
 
 
 public class AddFermDialog extends javax.swing.JDialog implements ActionListener, ChangeListener, FocusListener {
@@ -324,8 +280,8 @@ public class AddFermDialog extends javax.swing.JDialog implements ActionListener
 			i.setMashed(bMash.isSelected());
 			i.setDescription(txtDescr.getText());
 			i.setModified(bModified.isSelected());
-			i.setSteep(bSteep.isSelected());
-			i.ferments(bFerments.isSelected());
+			i.setSteeped(bSteep.isSelected());
+			i.setFermentable(bFerments.isSelected());
 			
 			int result = 1;
 			int found = 0;
@@ -400,9 +356,9 @@ public class AddFermDialog extends javax.swing.JDialog implements ActionListener
 				}
 			
 				bMash.setSelected(temp.getMashed());
-				bSteep.setSelected(temp.getSteep());
+				bSteep.setSelected(temp.getSteeped());
 				bModified.setSelected(temp.getModified());
-				bFerments.setSelected(temp.ferments());
+				bFerments.setSelected(temp.getFermentable());
 				
 				if (temp.getDescription() != null){
 					

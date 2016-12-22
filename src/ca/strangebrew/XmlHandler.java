@@ -8,17 +8,17 @@
  * recipe.
  */
 package ca.strangebrew;
- 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 /**
@@ -166,7 +166,7 @@ public class XmlHandler extends DefaultHandler{
 				else if (str.equalsIgnoreCase("extract"))
 					m.setPppg(Double.parseDouble(currentAttributes.getValue(i)));	
 				else if (str.equalsIgnoreCase("ferments"))
-					m.ferments(Boolean.parseBoolean(currentAttributes.getValue(i)));
+					m.setFermentable(Boolean.parseBoolean(currentAttributes.getValue(i)));
 			}
 		}
 		// we have to do this here, because <batch> is an empty element
@@ -404,7 +404,7 @@ public class XmlHandler extends DefaultHandler{
 			} else if (currentElement.equalsIgnoreCase("MASHED")) {
 				m.setMashed(Boolean.valueOf(s).booleanValue());
 			} else if (currentElement.equalsIgnoreCase("STEEPED")) {
-				m.setSteep(Boolean.valueOf(s).booleanValue());
+				m.setSteeped(Boolean.valueOf(s).booleanValue());
 			} else if (currentElement.equalsIgnoreCase("DescrLookup") ||
 					currentElement.equalsIgnoreCase("description")) {
 				descrBuf = descrBuf + s;

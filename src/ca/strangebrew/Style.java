@@ -183,7 +183,6 @@ public class Style implements Comparable<Style> {
 		this.catNum = catNum;
 	}
 	/**
-	 * @param examples The examples to set.
 	 */
 	public void setExamples(String commercialEx) {
 		this.examples = commercialEx;
@@ -201,13 +200,11 @@ public class Style implements Comparable<Style> {
 		this.ibuLow = ibuLow;
 	}
 	/**
-	 * @param srmHigh The srmHigh to set.
 	 */
 	public void setSrmHigh(double lovHigh) {
 		this.srmHigh = lovHigh;
 	}
 	/**
-	 * @param srmLow The srmLow to set.
 	 */
 	public void setSrmLow(double lovLow) {
 		this.srmLow = lovLow;

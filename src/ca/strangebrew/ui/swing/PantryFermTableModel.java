@@ -5,17 +5,15 @@
  */
 package ca.strangebrew.ui.swing;
 
+import ca.strangebrew.Debug;
+import ca.strangebrew.Fermentable;
+import ca.strangebrew.SBStringUtils;
+
+import javax.swing.table.AbstractTableModel;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-import javax.swing.table.AbstractTableModel;
-
-import ca.strangebrew.Debug;
-import ca.strangebrew.Fermentable;
-
-import ca.strangebrew.SBStringUtils;
 
 
 public class PantryFermTableModel extends AbstractTableModel {
@@ -63,7 +61,7 @@ public class PantryFermTableModel extends AbstractTableModel {
 		try {
 			switch (col) {
 				case 0: // steep
-					return new Boolean(data.get(row).getSteep());
+					return new Boolean(data.get(row).getSteeped());
 				case 1: // mash
 					return new Boolean (data.get(row).getMashed());
 				case 2 :					
@@ -121,7 +119,7 @@ public class PantryFermTableModel extends AbstractTableModel {
 		try {
 			switch (col) {
 				case 0: 
-					data.get(row).setSteep(new Boolean (value.toString()).booleanValue());
+					data.get(row).setSteeped(new Boolean(value.toString()).booleanValue());
 					break;
 				case 1:
 					data.get(row).setMashed(new Boolean(value.toString()).booleanValue());
@@ -135,7 +133,7 @@ public class PantryFermTableModel extends AbstractTableModel {
 						Fermentable m = (Fermentable)value;
 						data.get(row).setPppg(m.getPppg());
 						data.get(row).setLov(m.getLov());
-						data.get(row).setSteep(m.getSteep());
+						data.get(row).setSteeped(m.getSteeped());
 						data.get(row).setMashed(m.getMashed());						
 					}
 					break;

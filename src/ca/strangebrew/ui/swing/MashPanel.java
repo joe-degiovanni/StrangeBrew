@@ -6,11 +6,20 @@
 
 package ca.strangebrew.ui.swing;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import ca.strangebrew.Debug;
+import ca.strangebrew.Mash;
+import ca.strangebrew.MashDefaults;
+import ca.strangebrew.Options;
+import ca.strangebrew.Quantity;
+import ca.strangebrew.Recipe;
+import ca.strangebrew.SBStringUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import javax.swing.*;
+import javax.swing.border.BevelBorder;
+import javax.swing.table.TableColumn;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
@@ -29,41 +38,6 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
-
-import javax.swing.BorderFactory;
-import javax.swing.ButtonGroup;
-import javax.swing.ComboBoxModel;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.JToolBar;
-import javax.swing.SwingUtilities;
-import javax.swing.border.BevelBorder;
-import javax.swing.table.TableColumn;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
-
-import ca.strangebrew.Debug;
-import ca.strangebrew.Mash;
-import ca.strangebrew.MashDefaults;
-import ca.strangebrew.Options;
-import ca.strangebrew.Quantity;
-import ca.strangebrew.Recipe;
-import ca.strangebrew.SBStringUtils;
-
 
 
 public class MashPanel extends javax.swing.JPanel implements ActionListener, FocusListener {
@@ -741,7 +715,7 @@ public class MashPanel extends javax.swing.JPanel implements ActionListener, Foc
                 s.useDelimiter("\\A");
                 String jsonStatus = s.next();
                 s.close();
-                JSONObject statusObject = (JSONObject) JSONValue.parse(jsonStatus);
+                JSONObject statusObject = new JSONObject(jsonStatus);
                 String selectedDevice = getMashDevice(statusObject);
                 if (selectedDevice == null || selectedDevice.length() == 0) {
                     return;
@@ -796,7 +770,7 @@ public class MashPanel extends javax.swing.JPanel implements ActionListener, Foc
 	    
 	    // Loop round to get the valid devices
 	    ArrayList<String> devArray = new ArrayList<String>();
-	    for (int i = 0; i < devices.size(); i++) {
+	    for (int i = 0; i < devices.length(); i++) {
 	        JSONObject dev = (JSONObject) devices.get(i);
 	        if (dev.get("pidstatus") != null) {
 	            devArray.add(dev.get("name").toString());
