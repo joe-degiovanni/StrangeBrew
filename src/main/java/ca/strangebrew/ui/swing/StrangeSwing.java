@@ -2178,7 +2178,7 @@ public class StrangeSwing extends javax.swing.JFrame implements ActionListener, 
 				File file = fileChooser.getSelectedFile();
 				// This is where a real application would save the file.
 				try {
-					saveAsHTML(file, "data/recipeToHtml.xslt", null);
+					saveAsHTML(file, "/recipeToHtml.xslt", null);
 
 				} catch (Exception ex) {
 					showError(ex);
