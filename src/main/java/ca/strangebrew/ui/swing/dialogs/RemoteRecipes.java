@@ -34,11 +34,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -51,6 +53,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.StringWriter;
@@ -266,72 +269,70 @@ public class RemoteRecipes extends javax.swing.JDialog implements ActionListener
 	}
 	
 	private void loadRecipesByStyle(String style) {
-
 	    try
 	    {
-	
         	String baseURL = Options.getInstance().getProperty("cloudURL");
 	    	
 	    	//URL url = new URL(baseURL+"/style/" + style);
         	URI rURI = new URI("http", null, baseURL, 80, "/styles/"+style, null, null);
-	    	URL url = rURI.toURL();
-	    	
-	    	InputStream response = url.openStream();
-	    	DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-
-	        dbf.setValidating(false);
-	        dbf.setIgnoringComments(false);
-	        dbf.setIgnoringElementContentWhitespace(true);
-	        dbf.setNamespaceAware(true);
-	        // dbf.setCoalescing(true);
-	        // dbf.setExpandEntityReferences(true);
-
-	        DocumentBuilder db = null;
-	        db = dbf.newDocumentBuilder();
-	        //db.setEntityResolver(new NullResolver());
-
-	        // db.setErrorHandler( new MyErrorHandler());
-
-	        Document readXML = db.parse(response);
-	        
-	        
-	        NodeList childNodes = readXML.getElementsByTagName("recipe");
-	        
-	        
-	        Debug.print("Loading recipes from online: "+ childNodes.getLength());    
-	        for(int x = 0; x < childNodes.getLength(); x++ ) {
-	        	
-	        	
-	        	Node child = childNodes.item(x);
-		        
-	        	NamedNodeMap childAttr = child.getAttributes();
-	        	
-	        	
-	        	// generate the recipe list
-	        	
-				long ID = Long.parseLong(childAttr.getNamedItem("id").getNodeValue() );
-				String Brewer = childAttr.getNamedItem("brewer").getNodeValue().toString();
-				String Title = childAttr.getNamedItem("name").getNodeValue().toString();
-				String Style = childAttr.getNamedItem("style").getNodeValue().toString();
-				int iteration = 0;//Integer.parseInt(childAttr.getNamedItem("iteration").getNodeValue());
-				Debug.print("Loading: " + Title);
-				BasicRecipe rRecipe = new BasicRecipe(ID, Brewer, Style, Title, iteration);
-				recipes.add(rRecipe);
-	        }
-		    
-			recipeTableModel.setData(recipes);
-			recipeTable.updateUI();
+			loadRecipesByURI(rURI);
 	    }
 	    catch (Exception e)
 	    {
 	        e.printStackTrace();
-	
 	    }
-		
-
-
 	}
-	
+
+	private void loadRecipesByURI(URI rURI) throws IOException, ParserConfigurationException, SAXException {
+		URL url = rURI.toURL();
+
+		InputStream response = url.openStream();
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
+		dbf.setValidating(false);
+		dbf.setIgnoringComments(false);
+		dbf.setIgnoringElementContentWhitespace(true);
+		dbf.setNamespaceAware(true);
+		// dbf.setCoalescing(true);
+		// dbf.setExpandEntityReferences(true);
+
+		DocumentBuilder db = null;
+		db = dbf.newDocumentBuilder();
+		//db.setEntityResolver(new NullResolver());
+
+		// db.setErrorHandler( new MyErrorHandler());
+
+		Document readXML = db.parse(response);
+
+
+		NodeList childNodes = readXML.getElementsByTagName("recipe");
+
+
+		Debug.print("Loading recipes from online: " + childNodes.getLength());
+		for(int x = 0; x < childNodes.getLength(); x++ ) {
+
+
+            Node child = childNodes.item(x);
+
+            NamedNodeMap childAttr = child.getAttributes();
+
+
+            // generate the recipe list
+
+            long ID = Long.parseLong(childAttr.getNamedItem("id").getNodeValue() );
+            String Brewer = childAttr.getNamedItem("brewer").getNodeValue().toString();
+            String Title = childAttr.getNamedItem("name").getNodeValue().toString();
+            String Style = childAttr.getNamedItem("style").getNodeValue().toString();
+            int iteration = 0;//Integer.parseInt(childAttr.getNamedItem("iteration").getNodeValue());
+            Debug.print("Loading: " + Title);
+            BasicRecipe rRecipe = new BasicRecipe(ID, Brewer, Style, Title, iteration);
+            recipes.add(rRecipe);
+        }
+
+		recipeTableModel.setData(recipes);
+		recipeTable.updateUI();
+	}
+
 	private void loadRecipesByBrewer(String brewer) {
 
 	    try
@@ -339,55 +340,7 @@ public class RemoteRecipes extends javax.swing.JDialog implements ActionListener
 	
         	String baseURL = Options.getInstance().getProperty("cloudURL");
         	URI rURI = new URI("http", null, baseURL, 80, "/brewer/"+brewer, null, null);
-	    	URL url = rURI.toURL();
-	    	InputStream response = url.openStream();
-	    	DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-
-	        dbf.setValidating(false);
-	        dbf.setIgnoringComments(false);
-	        dbf.setIgnoringElementContentWhitespace(true);
-	        dbf.setNamespaceAware(true);
-	        // dbf.setCoalescing(true);
-	        // dbf.setExpandEntityReferences(true);
-
-	        DocumentBuilder db = null;
-	        db = dbf.newDocumentBuilder();
-	        //db.setEntityResolver(new NullResolver());
-
-	        // db.setErrorHandler( new MyErrorHandler());
-
-	        Document readXML = db.parse(response);
-	        
-	        
-	        NodeList childNodes = readXML.getElementsByTagName("recipe");
-	        
-	        
-	        Debug.print("Loading recipes from online: "+ childNodes.getLength());    
-	        for(int x = 0; x < childNodes.getLength(); x++ ) {
-	        	
-	        	
-	        	Node child = childNodes.item(x);
-		        
-	        	NamedNodeMap childAttr = child.getAttributes();
-	        	
-	        	
-	        	// generate the recipe list
-	        	
-				long ID = Long.parseLong( childAttr.getNamedItem("id").getNodeValue() );
-				String Brewer = childAttr.getNamedItem("brewer").getNodeValue().toString();
-				String Title = childAttr.getNamedItem("name").getNodeValue().toString();
-				String Style = childAttr.getNamedItem("style").getNodeValue().toString();
-				int iteration = 0;//Integer.parseInt(childAttr.getNamedItem("iteration").getNodeValue());
-				Debug.print("Loading: " + Title);
-				BasicRecipe rRecipe = new BasicRecipe(ID, Brewer, Style, Title, iteration);
-				recipes.add(rRecipe);
-				
-		    
-	        }
-		    
-		
-			recipeTableModel.setData(recipes);
-			recipeTable.updateUI();
+			loadRecipesByURI(rURI);
 	    }
 	    catch (Exception e)
 	    {
