@@ -120,7 +120,7 @@ public class WebServer extends NanoHTTPD {
 				String path = SBStringUtils.getAppPath("data");
 				Debug.print("Using " + SBStringUtils.getAppPath("data"));
 				
-				File xsltFile = new File(path, "data/recipeToHtml.xslt");
+				File xsltFile = new File(path, "recipeToHtml.xslt");
 				
 				try {
 					return new Response(XmlTransformer.getString(xmlSource, xsltFile));
