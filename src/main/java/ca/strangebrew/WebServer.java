@@ -1,6 +1,5 @@
 package ca.strangebrew;
 
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
