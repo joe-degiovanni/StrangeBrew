@@ -9,11 +9,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
@@ -21,147 +17,122 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class WebServer extends NanoHTTPD {
-	
-	
-	private File rootDir;
-	private FileHandler fileHandler;
-    public final static Logger log = Logger.getLogger("com.strangebrew.WevServer");
+
+    private File rootDir;
+    private FileHandler fileHandler;
+    public final static Logger log = Logger.getLogger("com.strangebrew.WebServer");
     public String lineSep = System.getProperty("line.separator");
-    
-    private List<Recipe> recipes = new ArrayList<Recipe>();
-	private List<File> files = new ArrayList<File>();
 
-	/**
-     * Hashtable mapping (String)FILENAME_EXTENSION -> (String)MIME_TYPE
-     */
-    private static final Map<String, String> MIME_TYPES = new HashMap<String, String>() {/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
+    private List<Recipe> recipes = new ArrayList<>();
+    private List<File> files = new ArrayList<>();
 
-	{
-        put("css", "text/css");
-        put("htm", "text/html");
-        put("html", "text/html");
-        put("xml", "text/xml");
-        put("txt", "text/plain");
-        put("asc", "text/plain");
-        put("gif", "image/gif");
-        put("jpg", "image/jpeg");
-        put("jpeg", "image/jpeg");
-        put("png", "image/png");
-        put("mp3", "audio/mpeg");
-        put("m3u", "audio/mpeg-url");
-        put("mp4", "video/mp4");
-        put("ogv", "video/ogg");
-        put("flv", "video/x-flv");
-        put("mov", "video/quicktime");
-        put("swf", "application/x-shockwave-flash");
-        put("js", "application/javascript");
-        put("pdf", "application/pdf");
-        put("doc", "application/msword");
-        put("ogg", "application/x-ogg");
-        put("zip", "application/octet-stream");
-        put("exe", "application/octet-stream");
-        put("class", "application/octet-stream");
-    }};
+    private static final Map<String, String> MIME_TYPES = new HashMap<String, String>() {
+        private static final long serialVersionUID = 1L;
+        {
+            put("css", "text/css");
+            put("htm", "text/html");
+            put("html", "text/html");
+            put("xml", "text/xml");
+            put("txt", "text/plain");
+            put("asc", "text/plain");
+            put("gif", "image/gif");
+            put("jpg", "image/jpeg");
+            put("jpeg", "image/jpeg");
+            put("png", "image/png");
+            put("mp3", "audio/mpeg");
+            put("m3u", "audio/mpeg-url");
+            put("mp4", "video/mp4");
+            put("ogv", "video/ogg");
+            put("flv", "video/x-flv");
+            put("mov", "video/quicktime");
+            put("swf", "application/x-shockwave-flash");
+            put("js", "application/javascript");
+            put("pdf", "application/pdf");
+            put("doc", "application/msword");
+            put("ogg", "application/x-ogg");
+            put("zip", "application/octet-stream");
+            put("exe", "application/octet-stream");
+            put("class", "application/octet-stream");
+        }
+    };
 
-    
-	
-	public WebServer(int port) throws IOException {
-		
-		// just serve up on port 8080 for now
-		super(port);
-		
-		//setup the logging handlers
+
+    public WebServer(int port) throws IOException {
+        super(port);
+        setLoggingHandlers();
+    }
+
+    private void setLoggingHandlers() {
         Handler[] lH = log.getHandlers();
         for (Handler h : lH) {
-                h.setLevel(Level.INFO);
+            h.setLevel(Level.INFO);
         }
 
-        if(lH.length == 0) {
-                log.addHandler(new ConsoleHandler());
-                
-                // default level, this can be changed
-                try {
-                	log.info("System property: "+System.getProperty("debug"));
-                	if (System.getProperty("debug").equalsIgnoreCase("INFO")) {
-                	
-                		log.setLevel(Level.INFO);
-                		log.info("Enabled logging at an info level");
-                	} 
-                } catch (NullPointerException e) {
-                	log.setLevel(Level.WARNING);
+        if (lH.length == 0) {
+            log.addHandler(new ConsoleHandler());
+
+            // default level, this can be changed
+            try {
+                log.info("System property: " + System.getProperty("debug"));
+                if (System.getProperty("debug").equalsIgnoreCase("INFO")) {
+
+                    log.setLevel(Level.INFO);
+                    log.info("Enabled logging at an info level");
                 }
-                
+            } catch (NullPointerException e) {
+                log.setLevel(Level.WARNING);
+            }
+
+        }
+    }
+
+    public Response serve(String uri, Method method, Map<String, String> header, Map<String, String> parms, Map<String, String> files) {
+        Response response;
+
+        try {
+            initializeRootDir();
+            if (uri.contains("/recipe_")) {
+                response = serveRecipe(uri);
+            } else if (new File(rootDir, uri).exists()) {
+                response = serveFile(uri, header, rootDir);
+            } else {
+                response = listRecipes(uri);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Unexpected Exception Serving Request");
         }
 
-	
-	}
+        return response;
+    }
 
-	public WebServer() throws IOException{
-		this(8080);
-	}
-		
-	public Response serve( String uri, Method method,  Map<String, String> header, Map<String, String> parms, Map<String, String> files)
-	{
+    private void initializeRootDir() throws UnsupportedEncodingException {
+        if (rootDir == null) {
+            rootDir = new File(SBStringUtils.getAppPath("ini"));
+        }
+    }
 
-		// Are we looking for recipe details?
-		if(uri.contains("/recipe_")) {
-			try {
-				int i = Integer.parseInt(uri.substring(uri.indexOf("/recipe_") + 8));
-				recipes.get(i).calcFermentTotals();
-				recipes.get(i).calcHopsTotals();
-				recipes.get(i).calcMaltTotals();
-				recipes.get(i).calcPrimeSugar();
-				
-				String xml = recipes.get(i).toXML(null);
-				StreamSource xmlSource = new StreamSource(new StringReader(xml));
-				String path = SBStringUtils.getAppPath("data");
-				Debug.print("Using " + SBStringUtils.getAppPath("data"));
-				
-				File xsltFile = new File(path, "recipeToHtml.xslt");
-				
-				try {
-					return new Response(XmlTransformer.getString(xmlSource, xsltFile));
-				} catch (TransformerConfigurationException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (TransformerException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (Exception e) {
-				System.out.println("Invalid recipe ID");
-				e.printStackTrace();
-			}
-			
-			
-		}
-		
-		if(rootDir == null ) {
-			try {
-				rootDir = new File(SBStringUtils.getAppPath("ini"));
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		if (uri.equals("/")) {
-			return listRecipes(uri);
-		}
-		
-		if(new File(rootDir, uri).exists()) {
-            return serveFile(uri, header, rootDir);
-		}
-		return listRecipes(uri);
-	}
+    private Response serveRecipe(String uri) throws UnsupportedEncodingException, TransformerException {
+        int i = Integer.parseInt(uri.substring(uri.indexOf("/recipe_") + 8));
 
-	/**
+        Recipe recipe = recipes.get(i);
+
+        recipe.calcFermentTotals();
+        recipe.calcHopsTotals();
+        recipe.calcMaltTotals();
+        recipe.calcPrimeSugar();
+
+        String xml = recipe.toXML(null);
+        StreamSource xmlSource = new StreamSource(new StringReader(xml));
+        String path = SBStringUtils.getAppPath("data");
+        Debug.print("Using " + SBStringUtils.getAppPath("data"));
+
+        File xsltFile = new File(path, "recipeToHtml.xslt");
+
+        return new Response(XmlTransformer.getString(xmlSource, xsltFile));
+    }
+
+    /**
      * Serves file from homeDir and its' subdirectories (only). Uses only URI, ignores all headers and HTTP parameters.
      */
     public Response serveFile(String uri, Map<String, String> header, File homeDir) {
@@ -327,7 +298,7 @@ public class WebServer extends NanoHTTPD {
         res.addHeader("Accept-Ranges", "bytes"); // Announce that the file server accepts partial content requestes
         return res;
     }
-    
+
     /**
      * URL-encodes everything between "/"-characters. Encodes spaces as '%20' instead of '+'.
      */
@@ -349,106 +320,104 @@ public class WebServer extends NanoHTTPD {
         }
         return newUri;
     }
-    
+
     private void loadRecipes() {
-		recipes.clear();
-		files.clear();
-		
-		String recipeDir = "";
-		Options opt = Options.getInstance();
-		if(opt.getProperty("optRecipe") != null)
-			recipeDir = opt.getProperty("optRecipe");
-		
-		if(recipeDir.equalsIgnoreCase("") ) {
-			try {
-				recipeDir = SBStringUtils.getAppPath("recipes");
-			} catch (UnsupportedEncodingException e) {
-				return;
-			}
-		}
-		File dir = new File(recipeDir);
+        recipes.clear();
+        files.clear();
 
-		for (int i = 0; i < dir.list().length; i++) {
-			File file = new File(dir.list()[i]);
+        String recipeDir = "";
+        Options opt = Options.getInstance();
+        if (opt.getProperty("optRecipe") != null)
+            recipeDir = opt.getProperty("optRecipe");
 
-			if (file.getPath().endsWith(".rec") || file.getPath().endsWith(".qbrew")
-					|| file.getPath().endsWith(".xml")) {
+        if (recipeDir.equalsIgnoreCase("")) {
+            try {
+                recipeDir = SBStringUtils.getAppPath("recipes");
+            } catch (UnsupportedEncodingException e) {
+                return;
+            }
+        }
+        File dir = new File(recipeDir);
 
-				Debug.print("Opening: " + file.getName() + ".\n");
-				// file.getAbsolutePath doesn't work here for some reason,
-				// so we have to build it ourselves
-				String fileName = dir.getAbsolutePath() + System.getProperty("file.separator")
-						+ file.getName();
-				file = new File(fileName);
-				OpenImport openImport = new OpenImport();
-				Recipe r = openImport.openFile(file);
-				if (openImport.getFileType().equals("sb")
-						|| openImport.getFileType().equals("qbrew")
-						|| openImport.getFileType().equals("promash")) {
-					recipes.add(r);
-					files.add(file);
+        for (int i = 0; i < dir.list().length; i++) {
+            File file = new File(dir.list()[i]);
 
-				} else if (openImport.getFileType().equals("beerxml")) {
-					List<Recipe> rs = openImport.getRecipes();
-					for (int j=0; j<rs.size(); j++){
-						recipes.add(rs.get(j));
-						files.add(file);
-					}
-				}
-			}
-		}
+            if (file.getPath().endsWith(".rec") || file.getPath().endsWith(".qbrew")
+                    || file.getPath().endsWith(".xml")) {
 
-	}
-    
+                Debug.print("Opening: " + file.getName() + ".\n");
+                // file.getAbsolutePath doesn't work here for some reason,
+                // so we have to build it ourselves
+                String fileName = dir.getAbsolutePath() + System.getProperty("file.separator")
+                        + file.getName();
+                file = new File(fileName);
+                OpenImport openImport = new OpenImport();
+                Recipe r = openImport.openFile(file);
+                if (openImport.getFileType().equals("sb")
+                        || openImport.getFileType().equals("qbrew")
+                        || openImport.getFileType().equals("promash")) {
+                    recipes.add(r);
+                    files.add(file);
+
+                } else if (openImport.getFileType().equals("beerxml")) {
+                    List<Recipe> rs = openImport.getRecipes();
+                    for (int j = 0; j < rs.size(); j++) {
+                        recipes.add(rs.get(j));
+                        files.add(file);
+                    }
+                }
+            }
+        }
+    }
+
     public String getHeader() {
-		String header = "";
-		return header;
-	}
-    
+        String header = "";
+        return header;
+    }
+
     public String addJS() {
-		String javascript =  "<link rel=\"stylesheet\" type=\"text/css\" href=\"/templates/static/raspibrew.css\" />" + lineSep +  
-				 "<!-- Bootstrap -->" + lineSep +
-				"<link href=\"/templates/css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">" + lineSep + 
-	        
-			"<script type=\"text/javascript\" src=\"/templates/js/bootstrap.min.js\"></script>";
-	        		
-		return javascript;
+        String javascript = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/templates/static/raspibrew.css\" />" + lineSep +
+                "<!-- Bootstrap -->" + lineSep +
+                "<link href=\"/templates/css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">" + lineSep +
 
-	}
-    
-	private Response listRecipes(String uri) {
-		
-		
-		String msg = "<html>";
-	    msg += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">" + lineSep +
-			getHeader() + lineSep +
-			"</head><body>" + lineSep +
-			addJS() + lineSep;
+                "<script type=\"text/javascript\" src=\"/templates/js/bootstrap.min.js\"></script>";
 
-		Response res = null;
-		 
-		if (recipes == null || recipes.size() == 0 ) {
-			loadRecipes();
-		}
-	
-		Recipe curRecipe = null;
-		msg += "<div class=\"panel panel-primary\">";
-		
-		for (int i = 1; i < recipes.size(); ++i) {
-			curRecipe = recipes.get(i);
-			msg += "<a href=\"" + encodeUri("recipe_" + i) + "\" class=\"btn btn-primary btn-lg active\" role=\"button\">"
-					+ curRecipe.getName() + " - " + curRecipe.getStyle() + " by " + curRecipe.getBrewer()+
-					"</a>" + lineSep;
-			msg += "<br/>" + lineSep;
-		}
-		
-		msg += "</div>";
-		msg += "</body></html>";
-		res = new Response(msg);
-		
-		 
-		return res;
-	}
+        return javascript;
+    }
+
+    private Response listRecipes(String uri) {
+
+
+        String msg = "<html>";
+        msg += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">" + lineSep +
+                getHeader() + lineSep +
+                "</head><body>" + lineSep +
+                addJS() + lineSep;
+
+        Response res = null;
+
+        if (recipes == null || recipes.size() == 0) {
+            loadRecipes();
+        }
+
+        Recipe curRecipe = null;
+        msg += "<div class=\"panel panel-primary\">";
+
+        for (int i = 1; i < recipes.size(); ++i) {
+            curRecipe = recipes.get(i);
+            msg += "<a href=\"" + encodeUri("recipe_" + i) + "\" class=\"btn btn-primary btn-lg active\" role=\"button\">"
+                    + curRecipe.getName() + " - " + curRecipe.getStyle() + " by " + curRecipe.getBrewer() +
+                    "</a>" + lineSep;
+            msg += "<br/>" + lineSep;
+        }
+
+        msg += "</div>";
+        msg += "</body></html>";
+        res = new Response(msg);
+
+
+        return res;
+    }
 
 
 }
