@@ -1,4 +1,4 @@
-package com.mindprod.csv;
+package ca.strangebrew;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -5,9 +5,6 @@
  */
 package ca.strangebrew;
 
-import com.mindprod.csv.CSVReader;
-import com.mindprod.csv.CSVWriter;
-
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileReader;

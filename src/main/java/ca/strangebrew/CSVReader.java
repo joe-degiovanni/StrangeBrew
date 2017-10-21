@@ -1,4 +1,4 @@
-package com.mindprod.csv;
+package ca.strangebrew;
 
 import java.io.BufferedReader;
 import java.io.EOFException;
