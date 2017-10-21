@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="http://strangebrewcloud.appspot.com/html/recipeToHtml.xslt"?><STRANGEBREWRECIPE version = "2.1.0">
+<!-- This is a SBJava export.  StrangeBrew 1.8 will not import it. -->
+  <DETAILS>
+  <NAME>Flynntown Oktoberfest</NAME>
+  <BREWER>Flynntown Brewing Co</BREWER>
+  <NOTES></NOTES>
+  <EFFICIENCY>70.0</EFFICIENCY>
+  <OG>1.129</OG>
+  <FG>1.032</FG>
+  <STYLE>rzen</STYLE>
+  <MASH>false</MASH>
+  <LOV>20.4</LOV>
+  <IBU>25.1</IBU>
+  <ALC>13.0</ALC>
+  <!-- SBJ1.0 Extensions: -->
+  <EVAP>1.5</EVAP>
+  <EVAP_METHOD>Constant</EVAP_METHOD>
+  <!-- END SBJ1.0 Extensions -->
+  <BOIL_TIME>60</BOIL_TIME>
+  <PRESIZE>40.48996608</PRESIZE>
+  <SIZE>37.854336</SIZE>
+  <SIZE_UNITS>litres</SIZE_UNITS>
+  <MALT_UNITS>pounds</MALT_UNITS>
+  <HOPS_UNITS>ounces</HOPS_UNITS>
+  <YEAST>English Ale</YEAST>
+  <RECIPE_DATE>10/20/2017</RECIPE_DATE>
+  <ATTENUATION>75.0</ATTENUATION>
+  <!-- SBJ1.0 Extensions: -->
+  <ALC_METHOD>Volume</ALC_METHOD>
+  <IBU_METHOD>Tinseth</IBU_METHOD>
+  <COLOUR_METHOD>SRM</COLOUR_METHOD>
+  <KETTLE_LOSS>0.0</KETTLE_LOSS>
+  <TRUB_LOSS>0.0</TRUB_LOSS>
+  <MISC_LOSS>0.0</MISC_LOSS>
+  <PELLET_HOP_PCT>6.0</PELLET_HOP_PCT>
+  <YEAST_COST>0.0</YEAST_COST>
+  <OTHER_COST>5.0</OTHER_COST>
+  <!-- END SBJ1.0 Extensions -->
+  </DETAILS>
+  <FERMENTABLES>
+    <TOTAL>26.999977975820002</TOTAL>
+    <ITEM>
+      <MALT>Pale Malt (2 Row) US</MALT>
+      <AMOUNT>13.999988580054818</AMOUNT>
+      <PERCENT>51.9</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03634</POINTS>
+      <LOV>2.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Base malt for all beer styles</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Pale Malt, Maris Otter</MALT>
+      <AMOUNT>7.999993474317039</AMOUNT>
+      <PERCENT>29.6</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03795</POINTS>
+      <LOV>3.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Premium base malt from the UK.  Popular for many English styles of beer including ales, pale ales and bitters.</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Caramel/Crystal Malt - 40L</MALT>
+      <AMOUNT>3.9999967371585194</AMOUNT>
+      <PERCENT>14.8</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03404</POINTS>
+      <LOV>40.0</LOV>
+      <MASHED>false</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Adds body, color and improves head retention.
+Also called &quot;Crystal&quot; malt.</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Special B Malt</MALT>
+      <AMOUNT>0.49999959214481493</AMOUNT>
+      <PERCENT>1.9</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.029992</POINTS>
+      <LOV>180.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Extreme caramel aroma and flavored malt.  Used in dark Belgian Abbey and Trappist ales.  Unique flavor and aroma.</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Roasted Barley</MALT>
+      <AMOUNT>0.49999959214481493</AMOUNT>
+      <PERCENT>1.9</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0253</POINTS>
+      <LOV>300.0</LOV>
+      <MASHED>false</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Roasted at high temperature to create a burnt, grainy, coffee like flavor.
+Imparts a red to deep brown color to beer, and very strong roasted flavor.
+Use 2-4% in Brown ales to add a nutty flavor, or 3-10% in Porters and Stouts for coffee flavor.</DESCRIPTION>
+    </ITEM>
+  </FERMENTABLES>
+  <HOPS>
+    <TOTAL>9.9999918428963</TOTAL>
+    <ITEM>
+      <HOP>Northern Brewer</HOP>
+      <AMOUNT>3.9999967371585194</AMOUNT>
+      <TIME>60</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Leaf</FORM>
+      <ALPHA>4.0</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Also called Hallertauer Northern Brewers
+Used for: Bittering and finishing both ales and lagers of all kinds
+Aroma: Fine, dry, clean bittering hop.  Unique flavor.
+Substitutes: Hallertauer Mittelfrueh, Hallertauer
+Examples: Anchor Steam, Old Peculiar, </DESCRIPTION>
+      <DATE>Fri Oct 20 23:43:21 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Cascade</HOP>
+      <AMOUNT>1.9999983685792597</AMOUNT>
+      <TIME>20</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Leaf</FORM>
+      <ALPHA>3.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>A hops with Northern Brewers Heritage
+Used for: American ales and lagers
+Aroma: Strong spicy, floral, grapefruit character
+Substitutes: Centennial
+Examples: Sierra Nevada Pale Ale, Anchor Liberty Ale</DESCRIPTION>
+      <DATE>Fri Oct 20 23:43:21 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Crystal</HOP>
+      <AMOUNT>3.9999967371585194</AMOUNT>
+      <TIME>20</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Leaf</FORM>
+      <ALPHA>3.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Used for: Aroma and finishing hops for Lagers
+Aroma: Clean, mild, pleasant and slightly spicy
+Substitutes: Hallertauer, Mount Liberty</DESCRIPTION>
+      <DATE>Fri Oct 20 23:43:21 CDT 2017</DATE>
+    </ITEM>
+  </HOPS>
+  <MISC>
+    <ITEM>
+      <NAME>Canned Pumpkin</NAME>
+      <AMOUNT>878.8340000000001</AMOUNT>
+      <UNITS>grams</UNITS>
+      <STAGE>Mash</STAGE>
+      <TIME>60</TIME>
+      <COMMENTS></COMMENTS>
+    </ITEM>
+    <ITEM>
+      <NAME>Pumpkin Pie Spice</NAME>
+      <AMOUNT>28.35</AMOUNT>
+      <UNITS>grams</UNITS>
+      <STAGE>Boil</STAGE>
+      <TIME>10</TIME>
+      <COMMENTS></COMMENTS>
+    </ITEM>
+    <ITEM>
+      <NAME>Vanilla</NAME>
+      <AMOUNT>29.573999999999998</AMOUNT>
+      <UNITS>grams</UNITS>
+      <STAGE>Boil</STAGE>
+      <TIME>1</TIME>
+      <COMMENTS></COMMENTS>
+    </ITEM>
+    <ITEM>
+      <NAME>Pumpkin Pie Spice</NAME>
+      <AMOUNT>28.35</AMOUNT>
+      <UNITS>grams</UNITS>
+      <STAGE>Boil</STAGE>
+      <TIME>1</TIME>
+      <COMMENTS></COMMENTS>
+    </ITEM>
+  </MISC>
+  <MASH>
+    <NAME>Mash</NAME>
+    <MASH_VOLUME>9.39</MASH_VOLUME>
+    <MASH_VOL_U>gallons US</MASH_VOL_U>
+    <MASH_RATIO>1.25</MASH_RATIO>
+    <MASH_RATIO_U>qt/lb</MASH_RATIO_U>
+    <MASH_TIME>45</MASH_TIME>
+    <MASH_TMP_U>C</MASH_TMP_U>
+    <THICK_DECOCT_RATIO>0.6</THICK_DECOCT_RATIO>
+    <THIN_DECOCT_RATIO>0.9</THIN_DECOCT_RATIO>
+    <MASH_TUNLOSS_TEMP>1.6666666666666665</MASH_TUNLOSS_TEMP>
+    <GRAIN_TEMP>20.0</GRAIN_TEMP>
+    <BOIL_TEMP>100.0</BOIL_TEMP>
+    <ITEM>
+      <TYPE>alpha</TYPE>
+      <TEMP>156.00000002</TEMP>
+      <DISPL_TEMP>68.9</DISPL_TEMP>
+      <END_TEMP>156.00000002</END_TEMP>
+      <DISPL_END_TEMP>68.9</DISPL_END_TEMP>
+      <MIN>45</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>infusion</METHOD>
+      <WEIGHT_LBS>22.49998164651667</WEIGHT_LBS>
+      <DIRECTIONS>Mash in with 7.0 gallons US of water at 79.4 C</DIRECTIONS>
+    </ITEM>
+  </MASH>
+   <FERMENTATION_SCHEDULE>
+   </FERMENTATION_SCHEDULE>
+   <CARB>
+      <BOTTLETEMP>68.0</BOTTLETEMP>
+      <SERVTEMP>45.0</SERVTEMP>
+      <VOL>2.4</VOL>
+      <SUGAR></SUGAR>
+      <AMOUNT>296.8</AMOUNT>
+      <SUGARU>g</SUGARU>
+      <TEMPU>F</TEMPU>
+      <KEG>true</KEG>
+      <PSI>13.72</PSI>
+   </CARB>
+   <WATER_PROFILE>
+      <SOURCE_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </SOURCE_WATER>
+      <TARGET_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </TARGET_WATER>
+      <ACID>
+         <NAME>Citric</NAME>
+         <AMT>0.00</AMT>
+         <ACIDU>mg</ACIDU>
+      </ACID>
+   </WATER_PROFILE>
+  <NOTES>
+  </NOTES>
+ <style>
+  <subcategory id="null">    <name>rzen</name>
+    <aroma>null</aroma>
+    <appearance>null</appearance>
+    <flavor>null</flavor>
+    <mouthfeel>null</mouthfeel>
+    <impression>null</impression>
+    <comments>null</comments>
+    <ingredients>null</ingredients>
+ <stats>
+  <og flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </og>
+  <fg flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </fg>
+  <ibu flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </ibu>
+  <srm flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </srm>
+  <abv flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </abv>
+</stats>
+    <examples>null</examples>
+  </subcategory>
+ </style>
+</STRANGEBREWRECIPE>

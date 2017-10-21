@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="http://strangebrewcloud.appspot.com/html/recipeToHtml.xslt"?><STRANGEBREWRECIPE version = "2.1.0">
+<!-- This is a SBJava export.  StrangeBrew 1.8 will not import it. -->
+  <DETAILS>
+  <NAME>Flynntown Buffalo Club Lager</NAME>
+  <BREWER>Flynntown Brewing Co</BREWER>
+  <NOTES></NOTES>
+  <EFFICIENCY>70.0</EFFICIENCY>
+  <OG>1.059</OG>
+  <FG>1.015</FG>
+  <STYLE>Premium American Lager</STYLE>
+  <MASH>false</MASH>
+  <LOV>4.8</LOV>
+  <IBU>20.3</IBU>
+  <ALC>5.8</ALC>
+  <!-- SBJ1.0 Extensions: -->
+  <EVAP>1.5</EVAP>
+  <EVAP_METHOD>Constant</EVAP_METHOD>
+  <!-- END SBJ1.0 Extensions -->
+  <BOIL_TIME>60</BOIL_TIME>
+  <PRESIZE>44.388962688</PRESIZE>
+  <SIZE>41.6397696</SIZE>
+  <SIZE_UNITS>litres</SIZE_UNITS>
+  <MALT_UNITS>pounds</MALT_UNITS>
+  <HOPS_UNITS>ounces</HOPS_UNITS>
+  <YEAST>American Lager</YEAST>
+  <RECIPE_DATE>10/20/2017</RECIPE_DATE>
+  <ATTENUATION>75.0</ATTENUATION>
+  <!-- SBJ1.0 Extensions: -->
+  <ALC_METHOD>Volume</ALC_METHOD>
+  <IBU_METHOD>Tinseth</IBU_METHOD>
+  <COLOUR_METHOD>SRM</COLOUR_METHOD>
+  <KETTLE_LOSS>0.0</KETTLE_LOSS>
+  <TRUB_LOSS>0.0</TRUB_LOSS>
+  <MISC_LOSS>0.0</MISC_LOSS>
+  <PELLET_HOP_PCT>6.0</PELLET_HOP_PCT>
+  <YEAST_COST>0.0</YEAST_COST>
+  <OTHER_COST>5.0</OTHER_COST>
+  <!-- END SBJ1.0 Extensions -->
+  </DETAILS>
+  <FERMENTABLES>
+    <TOTAL>22.25095695502991</TOTAL>
+    <ITEM>
+      <MALT>Pale Malt (2 Row) US</MALT>
+      <AMOUNT>18.500859924076764</AMOUNT>
+      <PERCENT>83.1</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03634</POINTS>
+      <LOV>2.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Base malt for all beer styles</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Corn, Flaked</MALT>
+      <AMOUNT>2.7500978466635138</AMOUNT>
+      <PERCENT>12.4</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0368</POINTS>
+      <LOV>1.3</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Generally a neutral flavor, used to reduce maltiness of beer
+Produces beer with a milder, less malty flavor
+Uses: Primarily for light Bohemian and Pilsner lagers</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Caramel/Crystal Malt - 20L</MALT>
+      <AMOUNT>0.9999991842896299</AMOUNT>
+      <PERCENT>4.5</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0345</POINTS>
+      <LOV>20.0</LOV>
+      <MASHED>false</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Adds body, color and improves head retention.
+Also called &quot;Crystal&quot; malt.</DESCRIPTION>
+    </ITEM>
+  </FERMENTABLES>
+  <HOPS>
+    <TOTAL>2.99999755286889</TOTAL>
+    <ITEM>
+      <HOP>Mt. Hood</HOP>
+      <AMOUNT>1.9999983685792597</AMOUNT>
+      <TIME>60</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>5.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Used for: European Lagers, finishing
+Aroma: Mild with a clean aroma, neutral flavor. Somewhat pungent.
+Substitutes: Hallertauer, Liberty, Crystal</DESCRIPTION>
+      <DATE>Fri Oct 20 23:44:17 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Cascade</HOP>
+      <AMOUNT>0.9999991842896299</AMOUNT>
+      <TIME>10</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>5.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>A hops with Northern Brewers Heritage
+Used for: American ales and lagers
+Aroma: Strong spicy, floral, grapefruit character
+Substitutes: Centennial
+Examples: Sierra Nevada Pale Ale, Anchor Liberty Ale</DESCRIPTION>
+      <DATE>Fri Oct 20 23:44:17 CDT 2017</DATE>
+    </ITEM>
+  </HOPS>
+  <MISC>
+  </MISC>
+  <MASH>
+    <NAME>Mash</NAME>
+    <MASH_VOLUME>8.87</MASH_VOLUME>
+    <MASH_VOL_U>gallons US</MASH_VOL_U>
+    <MASH_RATIO>1.25</MASH_RATIO>
+    <MASH_RATIO_U>qt/lb</MASH_RATIO_U>
+    <MASH_TIME>85</MASH_TIME>
+    <MASH_TMP_U>C</MASH_TMP_U>
+    <THICK_DECOCT_RATIO>0.6</THICK_DECOCT_RATIO>
+    <THIN_DECOCT_RATIO>0.9</THIN_DECOCT_RATIO>
+    <MASH_TUNLOSS_TEMP>1.6666666666666665</MASH_TUNLOSS_TEMP>
+    <GRAIN_TEMP>20.0</GRAIN_TEMP>
+    <BOIL_TEMP>100.0</BOIL_TEMP>
+    <ITEM>
+      <TYPE>protein</TYPE>
+      <TEMP>129.99999992</TEMP>
+      <DISPL_TEMP>54.4</DISPL_TEMP>
+      <END_TEMP>129.99999992</END_TEMP>
+      <DISPL_END_TEMP>54.4</DISPL_END_TEMP>
+      <MIN>30</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>infusion</METHOD>
+      <WEIGHT_LBS>21.25095777074028</WEIGHT_LBS>
+      <DIRECTIONS>Mash in with 6.6 gallons US of water at 62.7 C</DIRECTIONS>
+    </ITEM>
+    <ITEM>
+      <TYPE>beta</TYPE>
+      <TEMP>140.0</TEMP>
+      <DISPL_TEMP>60.0</DISPL_TEMP>
+      <END_TEMP>140.0</END_TEMP>
+      <DISPL_END_TEMP>60.0</DISPL_END_TEMP>
+      <MIN>20</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>Decoction</METHOD>
+      <WEIGHT_LBS>21.25095777074028</WEIGHT_LBS>
+      <DIRECTIONS>Add 0.1 gallons US of water at 100.0 C</DIRECTIONS>
+    </ITEM>
+    <ITEM>
+      <TYPE>alpha</TYPE>
+      <TEMP>154.99999994</TEMP>
+      <DISPL_TEMP>68.3</DISPL_TEMP>
+      <END_TEMP>154.99999994</END_TEMP>
+      <DISPL_END_TEMP>68.3</DISPL_END_TEMP>
+      <MIN>25</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>Decoction</METHOD>
+      <WEIGHT_LBS>21.25095777074028</WEIGHT_LBS>
+      <DIRECTIONS>Add 0.1 gallons US of water at 100.0 C</DIRECTIONS>
+    </ITEM>
+    <ITEM>
+      <TYPE>mashout</TYPE>
+      <TEMP>168.00000008</TEMP>
+      <DISPL_TEMP>75.6</DISPL_TEMP>
+      <END_TEMP>168.00000008</END_TEMP>
+      <DISPL_END_TEMP>75.6</DISPL_END_TEMP>
+      <MIN>10</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>Temperature</METHOD>
+      <WEIGHT_LBS>21.25095777074028</WEIGHT_LBS>
+      <DIRECTIONS>Add 0.1 gallons US of water at 100.0 C</DIRECTIONS>
+    </ITEM>
+  </MASH>
+   <FERMENTATION_SCHEDULE>
+   </FERMENTATION_SCHEDULE>
+   <CARB>
+      <BOTTLETEMP>68.0</BOTTLETEMP>
+      <SERVTEMP>45.0</SERVTEMP>
+      <VOL>2.4</VOL>
+      <SUGAR></SUGAR>
+      <AMOUNT>326.4</AMOUNT>
+      <SUGARU>g</SUGARU>
+      <TEMPU>F</TEMPU>
+      <KEG>true</KEG>
+      <PSI>13.72</PSI>
+   </CARB>
+   <WATER_PROFILE>
+      <SOURCE_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </SOURCE_WATER>
+      <TARGET_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </TARGET_WATER>
+      <ACID>
+         <NAME>Citric</NAME>
+         <AMT>0.00</AMT>
+         <ACIDU>mg</ACIDU>
+      </ACID>
+   </WATER_PROFILE>
+  <NOTES>
+  </NOTES>
+ <style>
+  <subcategory id="null">    <name>Premium American Lager</name>
+    <aroma>
+Low to medium-low malt aroma, which can be grainy, sweet or corn-like. Hop aroma may range from very low to a medium-low, spicy or floral hop presence. Low levels of yeast character (green apples, DMS , or fruitiness) are optional but acceptable. No diacetyl.</aroma>
+    <appearance>
+Pale straw to gold color. White, frothy head may not be long lasting. Very clear.</appearance>
+    <flavor>
+Crisp and dry flavor with some low levels of sweetness. Hop flavor ranges from none to low levels. Hop bitterness at low to medium level. Balance may vary from slightly malty to slightly bitter, but is relatively close to even. High levels of carbonation may provide a slight acidity or dry "sting." No diacetyl. No fruitiness.</flavor>
+    <mouthfeel>
+Medium-light body from use of adjuncts such as rice or corn. Highly carbonated with slight carbonic bite on the tongue.</mouthfeel>
+    <impression>
+Refreshing and thirst quenching, although generally more filling than standard/lite versions.</impression>
+    <comments>
+Premium beers tend to have fewer adjuncts than standard/lite lagers, and can be all-malt. Strong flavors are a fault, but premium lagers have more flavor than standard/lite lagers. A broad category of international mass-market lagers ranging from up-scale American lagers to the typical "import" or "green bottle" international beers found in America.</comments>
+    <ingredients>
+Two- or six-row barley with up to 25% rice or corn as adjuncts.</ingredients>
+ <stats>
+  <og flexible="false">
+      <low>1.046</low>
+      <high>1.056</high>
+  </og>
+  <fg flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </fg>
+  <ibu flexible="false">
+      <low>15.0</low>
+      <high>25.0</high>
+  </ibu>
+  <srm flexible="false">
+      <low>2.0</low>
+      <high>6.0</high>
+  </srm>
+  <abv flexible="false">
+      <low>4.7</low>
+      <high>6.0</high>
+  </abv>
+</stats>
+    <examples>
+Miller Genuine Draft, Michelob, Coors Extra Gold, Heineken, Beck's, Stella Artois, Singha</examples>
+  </subcategory>
+ </style>
+</STRANGEBREWRECIPE>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<RECIPES>
+<RECIPE>
+ <NAME>Flynntown Maibock</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>All Grain</TYPE>
+ <BREWER>Flynntown Brewing Co</BREWER>
+ <ASST_BREWER></ASST_BREWER>
+ <BATCH_SIZE>41.6397696</BATCH_SIZE>
+ <BOIL_SIZE>56.7057953</BOIL_SIZE>
+ <BOIL_TIME>75.0000000</BOIL_TIME>
+ <EFFICIENCY>70.0000000</EFFICIENCY>
+ <HOPS>
+<HOP>
+ <NAME>Northern Brewer</NAME>
+ <VERSION>1</VERSION>
+ <ORIGIN>Germany</ORIGIN>
+ <ALPHA>5.0000000</ALPHA>
+ <AMOUNT>0.0850485</AMOUNT>
+ <USE>Boil</USE>
+ <TIME>60.0000000</TIME>
+ <NOTES>Also called Hallertauer Northern Brewers
+Used for: Bittering and finishing both ales and lagers of all kinds
+Aroma: Fine, dry, clean bittering hop.  Unique flavor.
+Substitutes: Hallertauer Mittelfrueh, Hallertauer
+Examples: Anchor Steam, Old Peculiar, </NOTES>
+ <TYPE>Both</TYPE>
+ <FORM>Leaf</FORM>
+ <BETA>4.0000000</BETA>
+ <HSI>35.0000000</HSI>
+ <DISPLAY_AMOUNT>3.00 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0.00 oz</INVENTORY>
+ <DISPLAY_TIME>60.0 min</DISPLAY_TIME>
+</HOP>
+<HOP>
+ <NAME>Santiam</NAME>
+ <VERSION>1</VERSION>
+ <ORIGIN>U.S.</ORIGIN>
+ <ALPHA>6.0000000</ALPHA>
+ <AMOUNT>0.0566990</AMOUNT>
+ <USE>Boil</USE>
+ <TIME>10.0000000</TIME>
+ <NOTES>Triploid aroma selection derived from Tettnang and Hallertauer (1997)
+Used for: Lager, U.S. Pale Ale, Pilsner
+Substitutes: German Tettnang, Spalt, Spalt Select</NOTES>
+ <TYPE>Aroma</TYPE>
+ <FORM>Leaf</FORM>
+ <BETA>7.0000000</BETA>
+ <HSI>35.0000000</HSI>
+ <DISPLAY_AMOUNT>2.00 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0.00 oz</INVENTORY>
+ <DISPLAY_TIME>10.0 min</DISPLAY_TIME>
+</HOP>
+</HOPS>
+
+ <FERMENTABLES>
+<FERMENTABLE>
+ <NAME>Pilsner (2 Row) Ger</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Grain</TYPE>
+ <AMOUNT>8.1646560</AMOUNT>
+ <YIELD>81.0000000</YIELD>
+ <COLOR>2.0000000</COLOR>
+ <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+ <ORIGIN>Germany</ORIGIN>
+ <SUPPLIER></SUPPLIER>
+ <NOTES>German base for Pilsners and Bohemian Lagers</NOTES>
+ <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+ <MOISTURE>4.0000000</MOISTURE>
+ <DIASTATIC_POWER>110.0000000</DIASTATIC_POWER>
+ <PROTEIN>11.0000000</PROTEIN>
+ <MAX_IN_BATCH>100.0000000</MAX_IN_BATCH>
+ <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+ <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+ <DISPLAY_AMOUNT>18 lbs</DISPLAY_AMOUNT>
+ <INVENTORY>0.0 oz</INVENTORY>
+ <POTENTIAL>1.0372600</POTENTIAL>
+ <DISPLAY_COLOR>2.0 SRM</DISPLAY_COLOR>
+ <EXTRACT_SUBSTITUTE>Pilsner Liquid Extract</EXTRACT_SUBSTITUTE>
+</FERMENTABLE>
+<FERMENTABLE>
+ <NAME>Munich Malt</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Grain</TYPE>
+ <AMOUNT>2.2679600</AMOUNT>
+ <YIELD>80.0000000</YIELD>
+ <COLOR>9.0000000</COLOR>
+ <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+ <ORIGIN>Germany</ORIGIN>
+ <SUPPLIER></SUPPLIER>
+ <NOTES>Malty-sweet flavor characteristic and adds a reddish amber color to the beer.
+Does not contribute signficantly to body or head retention.
+Use for: Bock, Porter, Marzen, Oktoberfest beers</NOTES>
+ <COARSE_FINE_DIFF>1.3000000</COARSE_FINE_DIFF>
+ <MOISTURE>5.0000000</MOISTURE>
+ <DIASTATIC_POWER>72.0000000</DIASTATIC_POWER>
+ <PROTEIN>11.5000000</PROTEIN>
+ <MAX_IN_BATCH>80.0000000</MAX_IN_BATCH>
+ <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+ <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+ <DISPLAY_AMOUNT>5 lbs</DISPLAY_AMOUNT>
+ <INVENTORY>0.0 oz</INVENTORY>
+ <POTENTIAL>1.0368000</POTENTIAL>
+ <DISPLAY_COLOR>9.0 SRM</DISPLAY_COLOR>
+ <EXTRACT_SUBSTITUTE>Amber Liquid Extract</EXTRACT_SUBSTITUTE>
+</FERMENTABLE>
+<FERMENTABLE>
+ <NAME>Caramel/Crystal Malt - 40L</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Grain</TYPE>
+ <AMOUNT>1.3607760</AMOUNT>
+ <YIELD>74.0000000</YIELD>
+ <COLOR>40.0000000</COLOR>
+ <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+ <ORIGIN>US</ORIGIN>
+ <SUPPLIER></SUPPLIER>
+ <NOTES>Adds body, color and improves head retention.
+Also called &#34;Crystal&#34; malt.</NOTES>
+ <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+ <MOISTURE>4.0000000</MOISTURE>
+ <DIASTATIC_POWER>0.0000000</DIASTATIC_POWER>
+ <PROTEIN>13.2000000</PROTEIN>
+ <MAX_IN_BATCH>20.0000000</MAX_IN_BATCH>
+ <RECOMMEND_MASH>FALSE</RECOMMEND_MASH>
+ <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+ <DISPLAY_AMOUNT>3 lbs</DISPLAY_AMOUNT>
+ <INVENTORY>0.0 oz</INVENTORY>
+ <POTENTIAL>1.0340400</POTENTIAL>
+ <DISPLAY_COLOR>40.0 SRM</DISPLAY_COLOR>
+ <EXTRACT_SUBSTITUTE></EXTRACT_SUBSTITUTE>
+</FERMENTABLE>
+</FERMENTABLES>
+
+ 
+ <YEASTS>
+<YEAST>
+ <NAME>Bavarian Lager</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Lager</TYPE>
+ <FORM>Liquid</FORM>
+ <AMOUNT>0.1242095</AMOUNT>
+ <AMOUNT_IS_WEIGHT>FALSE</AMOUNT_IS_WEIGHT>
+ <LABORATORY>Wyeast Labs</LABORATORY>
+ <PRODUCT_ID>2206</PRODUCT_ID>
+ <MIN_TEMPERATURE>7.7777778</MIN_TEMPERATURE>
+ <MAX_TEMPERATURE>14.4444444</MAX_TEMPERATURE>
+ <FLOCCULATION>Medium</FLOCCULATION>
+ <ATTENUATION>75.0000000</ATTENUATION>
+ <NOTES>Use by many German breweries.  Produces a full-bodied, rich, malty beer.</NOTES>
+ <BEST_FOR>German Bocks, Vienna, Oktoberfest, Hells, Marzens, Dunkel</BEST_FOR>
+ <MAX_REUSE>5</MAX_REUSE>
+ <TIMES_CULTURED>0</TIMES_CULTURED>
+ <ADD_TO_SECONDARY>FALSE</ADD_TO_SECONDARY>
+ <DISPLAY_AMOUNT>124.21 ml</DISPLAY_AMOUNT>
+ <DISP_MIN_TEMP>46.0 F</DISP_MIN_TEMP>
+ <DISP_MAX_TEMP>58.0 F</DISP_MAX_TEMP>
+ <INVENTORY>0.0 pkg</INVENTORY>
+ <CULTURE_DATE>14 Jun 2003</CULTURE_DATE>
+</YEAST>
+</YEASTS>
+
+ 
+ <STYLE>
+ <NAME>Mailbock/Helles Bock</NAME>
+ <VERSION>1</VERSION>
+ <CATEGORY>Bock</CATEGORY>
+ <CATEGORY_NUMBER>5</CATEGORY_NUMBER>
+ <STYLE_LETTER>A</STYLE_LETTER>
+ <STYLE_GUIDE>BJCP 2008</STYLE_GUIDE>
+ <TYPE>Lager</TYPE>
+ <OG_MIN>1.0640000</OG_MIN>
+ <OG_MAX>1.0720000</OG_MAX>
+ <FG_MIN>1.0110000</FG_MIN>
+ <FG_MAX>1.0180000</FG_MAX>
+ <IBU_MIN>23.0000000</IBU_MIN>
+ <IBU_MAX>35.0000000</IBU_MAX>
+ <COLOR_MIN>6.0000000</COLOR_MIN>
+ <COLOR_MAX>11.0000000</COLOR_MAX>
+ <CARB_MIN>2.2000000</CARB_MIN>
+ <CARB_MAX>2.7000000</CARB_MAX>
+ <ABV_MAX>7.4000000</ABV_MAX>
+ <ABV_MIN>6.3000000</ABV_MIN>
+ <NOTES>A relatively pale, strong, malty lager beer. Designed to walk a fine line between blandness and too much color. Hop character is generally more apparent than in other bocks. A fairly recent development in comparison to the other members of the bock family. The serving of Maibock is specifically associated with springtime and the month of May. Can be thought of as either a pale version of a traditional bock, or a Munich helles brewed to bock strength. While quite malty, this beer typically has less dark and rich malt flavors than a traditional bock. May also be drier, hoppier, and more bitter than a traditional bock. The hops compensate for the lower level of melanoidins. There is some dispute whether Helles (&#8220;pale&#8221;) Bock and Mai (&#8220;May&#8221;) Bock are synonymous. Most agree that they are identical (as is the consensus for M&#228;rzen and Oktoberfest), but some believe that Maibock is a &#8220;fest&#8221; type beer hitting the upper limits of hopping and color for the range. Any fruitiness is due to Munich and other specialty malts, not yeast-derived esters developed during fermentation.</NOTES>
+ <PROFILE>Aroma: Moderate to strong malt aroma, often with a lightly toasted quality and low melanoidins. Moderately low to no noble hop aroma, often with a spicy quality. Clean. No diacetyl. Fruity esters should be low to none. Some alcohol may be noticeable. May have a light DMS aroma from Pils malt.
+Appearance: Deep gold to light amber in color. Lagering should provide good clarity. Large, creamy, persistent, white head.
+Flavor: The rich flavor of continental European pale malts dominates (Pils malt flavor with some toasty notes and/or melanoidins). Little to no caramelization. May have a light DMS flavor from Pils malt. Moderate to no noble hop flavor. May have a low spicy or peppery quality from hops and/or alcohol. Moderate hop bitterness (more so in the balance than in other bocks). Clean, with no fruity esters or diacetyl. Wellattenuated, not cloying, with a moderately dry finish that may taste of both malt and hops.
+Mouthfeel: Medium-bodied. Moderate to moderately high carbonation. Smooth and clean with no harshness or astringency, despite the increased hop bitterness. Some alcohol warming may be present.</PROFILE>
+ <INGREDIENTS>Base of Pils and/or Vienna malt with some Munich malt to add character (although much less than in a traditional bock). No non-malt adjuncts. Noble hops. Soft water preferred so as to avoid harshness. Clean lager yeast. Decoction mash is typical, but boiling is less than in traditional bocks to restrain color development.</INGREDIENTS>
+ <EXAMPLES>Ayinger Maibock, Mahr&#39;s Bock, Hacker-Pschorr Hubertus Bock, Capital Maibock, Einbecker Mai-Urbock, Hofbr&#228;u Maibock, Victory St. Boisterous, Gordon Biersch Blonde Bock, Smuttynose Maibock</EXAMPLES>
+ <DISPLAY_OG_MIN>1.064 SG</DISPLAY_OG_MIN>
+ <DISPLAY_OG_MAX>1.072 SG</DISPLAY_OG_MAX>
+ <DISPLAY_FG_MIN>1.011 SG</DISPLAY_FG_MIN>
+ <DISPLAY_FG_MAX>1.018 SG</DISPLAY_FG_MAX>
+ <DISPLAY_COLOR_MIN>6.0 SRM</DISPLAY_COLOR_MIN>
+ <DISPLAY_COLOR_MAX>11.0 SRM</DISPLAY_COLOR_MAX>
+ <OG_RANGE>1.064-1.072 SG</OG_RANGE>
+ <FG_RANGE>1.011-1.018 SG</FG_RANGE>
+ <IBU_RANGE>23.0-35.0 IBUs</IBU_RANGE>
+ <CARB_RANGE>2.20-2.70 Vols</CARB_RANGE>
+ <COLOR_RANGE>6.0-11.0 SRM</COLOR_RANGE>
+ <ABV_RANGE>6.30-7.40 %</ABV_RANGE>
+</STYLE>
+
+ <EQUIPMENT>
+ <NAME>Stainless Kegs (10 Gal/37.8 L) - All Grain</NAME>
+ <VERSION>1</VERSION>
+ <BOIL_SIZE>56.7057953</BOIL_SIZE>
+ <BATCH_SIZE>41.6397696</BATCH_SIZE>
+ <TUN_VOLUME>56.7815040</TUN_VOLUME>
+ <TUN_WEIGHT>9.0718400</TUN_WEIGHT>
+ <TUN_SPECIFIC_HEAT>0.1500000</TUN_SPECIFIC_HEAT>
+ <TOP_UP_WATER>0.0000000</TOP_UP_WATER>
+ <TRUB_CHILLER_LOSS>3.7854336</TRUB_CHILLER_LOSS>
+ <EVAP_RATE>13.3511348</EVAP_RATE>
+ <BOIL_TIME>75.0000000</BOIL_TIME>
+ <CALC_BOIL_VOLUME>TRUE</CALC_BOIL_VOLUME>
+ <LAUTER_DEADSPACE>3.7854336</LAUTER_DEADSPACE>
+ <TOP_UP_KETTLE>0.0000000</TOP_UP_KETTLE>
+ <HOP_UTILIZATION>100.0000000</HOP_UTILIZATION>
+ <COOLING_LOSS_PCT>4.0000000</COOLING_LOSS_PCT>
+ <NOTES>Popular 10 gallon batch setup for all grain brewing.  Uses two large stainless 15 gal/58 l kegs for the boil pot and mash tun with the tops cut off the keg.  A third keg is often used as a pot to heat mash tun water.</NOTES>
+ <DISPLAY_BOIL_SIZE>14.98 gal</DISPLAY_BOIL_SIZE>
+ <DISPLAY_BATCH_SIZE>11.00 gal</DISPLAY_BATCH_SIZE>
+ <DISPLAY_TUN_VOLUME>15.00 gal</DISPLAY_TUN_VOLUME>
+ <DISPLAY_TUN_WEIGHT>20 lbs</DISPLAY_TUN_WEIGHT>
+ <DISPLAY_TOP_UP_WATER>0.00 gal</DISPLAY_TOP_UP_WATER>
+ <DISPLAY_TRUB_CHILLER_LOSS>1.00 gal</DISPLAY_TRUB_CHILLER_LOSS>
+ <DISPLAY_LAUTER_DEADSPACE>1.00 gal</DISPLAY_LAUTER_DEADSPACE>
+ <DISPLAY_TOP_UP_KETTLE>0.00 gal</DISPLAY_TOP_UP_KETTLE>
+</EQUIPMENT>
+
+ <MASH>
+ <NAME>Single Infusion, Medium Body, Batch Sparge</NAME>
+ <VERSION>1</VERSION>
+ <GRAIN_TEMP>22.2222222</GRAIN_TEMP>
+ <TUN_TEMP>22.2222222</TUN_TEMP>
+ <SPARGE_TEMP>75.5555556</SPARGE_TEMP>
+ <PH>5.4000000</PH>
+ <TUN_WEIGHT>320.0000000</TUN_WEIGHT>
+ <TUN_SPECIFIC_HEAT>0.1500000</TUN_SPECIFIC_HEAT>
+ <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+ <NOTES>Simple single infusion mash for use with most modern well modified grains (about 95% of the time).</NOTES>
+ <DISPLAY_GRAIN_TEMP>72.0 F</DISPLAY_GRAIN_TEMP>
+ <DISPLAY_TUN_TEMP>72.0 F</DISPLAY_TUN_TEMP>
+ <DISPLAY_SPARGE_TEMP>168.0 F</DISPLAY_SPARGE_TEMP>
+ <DISPLAY_TUN_WEIGHT>20 lbs</DISPLAY_TUN_WEIGHT>
+<MASH_STEPS>
+<MASH_STEP>
+ <NAME>Mash In</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Infusion</TYPE>
+ <INFUSE_AMOUNT>30.7566480</INFUSE_AMOUNT>
+ <STEP_TIME>60.0000000</STEP_TIME>
+ <STEP_TEMP>66.6666667</STEP_TEMP>
+ <RAMP_TIME>2.0000000</RAMP_TIME>
+ <END_TEMP>66.6666667</END_TEMP>
+ <DESCRIPTION>Add 36.50 qt of water at 162.4 F</DESCRIPTION>
+ <WATER_GRAIN_RATIO>1.250 qt/lb</WATER_GRAIN_RATIO>
+ <DECOCTION_AMT>0.00 qt</DECOCTION_AMT>
+ <INFUSE_TEMP>162.4 F</INFUSE_TEMP>
+ <DISPLAY_STEP_TEMP>152.0 F</DISPLAY_STEP_TEMP>
+ <DISPLAY_INFUSE_AMT>36.50 qt</DISPLAY_INFUSE_AMT>
+</MASH_STEP>
+</MASH_STEPS>
+
+</MASH>
+
+ <NOTES></NOTES>
+ <TASTE_NOTES></TASTE_NOTES>
+ <TASTE_RATING>30.0000000</TASTE_RATING>
+ <OG>1.0460000</OG>
+ <FG>1.0100000</FG>
+ <CARBONATION>2.3000000</CARBONATION>
+ <FERMENTATION_STAGES>2</FERMENTATION_STAGES>
+ <PRIMARY_AGE>14.0000000</PRIMARY_AGE>
+ <PRIMARY_TEMP>12.2222222</PRIMARY_TEMP>
+ <SECONDARY_AGE>3.0000000</SECONDARY_AGE>
+ <SECONDARY_TEMP>16.6666667</SECONDARY_TEMP>
+ <TERTIARY_AGE>7.0000000</TERTIARY_AGE>
+ <AGE>30.0000000</AGE>
+ <AGE_TEMP>15.5555556</AGE_TEMP>
+ <CARBONATION_USED>Keg with 12.54 PSI</CARBONATION_USED>
+ <FORCED_CARBONATION>FALSE</FORCED_CARBONATION>
+ <PRIMING_SUGAR_NAME>Forced Carbonation</PRIMING_SUGAR_NAME>
+ <PRIMING_SUGAR_EQUIV>1.0000000</PRIMING_SUGAR_EQUIV>
+ <KEG_PRIMING_FACTOR>0.5000000</KEG_PRIMING_FACTOR>
+ <CARBONATION_TEMP>7.2222222</CARBONATION_TEMP>
+ <DISPLAY_CARB_TEMP>45.0 F</DISPLAY_CARB_TEMP>
+ <DATE>19 Dec 2015</DATE>
+ <EST_OG>1.061 SG</EST_OG>
+ <EST_FG>1.014 SG</EST_FG>
+ <EST_COLOR>10.3 SRM</EST_COLOR>
+ <IBU>28.1 IBUs</IBU>
+ <IBU_METHOD>Tinseth</IBU_METHOD>
+ <EST_ABV>6.2 %</EST_ABV>
+ <ABV>4.7 %</ABV>
+ <ACTUAL_EFFICIENCY>24.0 %</ACTUAL_EFFICIENCY>
+ <CALORIES>151.6 kcal/12oz</CALORIES>
+ <DISPLAY_BATCH_SIZE>11.00 gal</DISPLAY_BATCH_SIZE>
+ <DISPLAY_BOIL_SIZE>14.98 gal</DISPLAY_BOIL_SIZE>
+ <DISPLAY_OG>1.046 SG</DISPLAY_OG>
+ <DISPLAY_FG>1.010 SG</DISPLAY_FG>
+ <DISPLAY_PRIMARY_TEMP>54.0 F</DISPLAY_PRIMARY_TEMP>
+ <DISPLAY_SECONDARY_TEMP>62.0 F</DISPLAY_SECONDARY_TEMP>
+ <DISPLAY_TERTIARY_TEMP>65.0 F</DISPLAY_TERTIARY_TEMP>
+ <DISPLAY_AGE_TEMP>60.0 F</DISPLAY_AGE_TEMP>
+</RECIPE>
+</RECIPES>

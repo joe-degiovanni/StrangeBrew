@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="http://strangebrewcloud.appspot.com/html/recipeToHtml.xslt"?><STRANGEBREWRECIPE version = "2.1.0">
+<!-- This is a SBJava export.  StrangeBrew 1.8 will not import it. -->
+  <DETAILS>
+  <NAME>Flynntown Witbier</NAME>
+  <BREWER>Flynntown Brewing Co</BREWER>
+  <NOTES></NOTES>
+  <EFFICIENCY>70.0</EFFICIENCY>
+  <OG>1.083</OG>
+  <FG>1.021</FG>
+  <STYLE>Witbier</STYLE>
+  <MASH>false</MASH>
+  <LOV>5.1</LOV>
+  <IBU>15.0</IBU>
+  <ALC>8.2</ALC>
+  <!-- SBJ1.0 Extensions: -->
+  <EVAP>1.5</EVAP>
+  <EVAP_METHOD>Constant</EVAP_METHOD>
+  <!-- END SBJ1.0 Extensions -->
+  <BOIL_TIME>60</BOIL_TIME>
+  <PRESIZE>44.388962688</PRESIZE>
+  <SIZE>41.6397696</SIZE>
+  <SIZE_UNITS>litres</SIZE_UNITS>
+  <MALT_UNITS>pounds</MALT_UNITS>
+  <HOPS_UNITS>ounces</HOPS_UNITS>
+  <YEAST>Belgian Witbier</YEAST>
+  <RECIPE_DATE>10/20/2017</RECIPE_DATE>
+  <ATTENUATION>75.0</ATTENUATION>
+  <!-- SBJ1.0 Extensions: -->
+  <ALC_METHOD>Volume</ALC_METHOD>
+  <IBU_METHOD>Tinseth</IBU_METHOD>
+  <COLOUR_METHOD>SRM</COLOUR_METHOD>
+  <KETTLE_LOSS>0.0</KETTLE_LOSS>
+  <TRUB_LOSS>0.0</TRUB_LOSS>
+  <MISC_LOSS>0.0</MISC_LOSS>
+  <PELLET_HOP_PCT>6.0</PELLET_HOP_PCT>
+  <YEAST_COST>0.0</YEAST_COST>
+  <OTHER_COST>5.0</OTHER_COST>
+  <!-- END SBJ1.0 Extensions -->
+  </DETAILS>
+  <FERMENTABLES>
+    <TOTAL>21.999196326869427</TOTAL>
+    <ITEM>
+      <MALT>Pilsner (2 Row) Bel</MALT>
+      <AMOUNT>8.999980753644511</AMOUNT>
+      <PERCENT>40.9</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03634</POINTS>
+      <LOV>2.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Belgian base malt for Continental lagers</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Unmalted Wheat</MALT>
+      <AMOUNT>8.499981161499695</AMOUNT>
+      <PERCENT>38.6</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0350014</POINTS>
+      <LOV>2.0</LOV>
+      <MASHED>false</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Crush Very Fine!!</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>White Wheat Malt</MALT>
+      <AMOUNT>2.7497418001100855</AMOUNT>
+      <PERCENT>12.5</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03956</POINTS>
+      <LOV>2.4</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>White wheat gives a malty flavor not available from raw wheat.
+Used in Weiss, Wit and White beers</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Oats, Flaked</MALT>
+      <AMOUNT>1.249493019470323</AMOUNT>
+      <PERCENT>5.7</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0368</POINTS>
+      <LOV>1.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Adds body, mouth feel and head retention to the beer
+Used in oatmeal stouts and portersAdds substantial protein haze to light beers
+Protein rest recommended unless flakes are pregelatinized</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Caramel Wheat Malt</MALT>
+      <AMOUNT>0.49999959214481493</AMOUNT>
+      <PERCENT>2.3</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0345</POINTS>
+      <LOV>46.0</LOV>
+      <MASHED>false</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Caramel wheat malt - emphasizes wheat malt aroma and adds color to the beer.  Popular for Dunkelweizens.  Also known as Carawheat -- which is a registered trademark of Wyermann Malting.</DESCRIPTION>
+    </ITEM>
+  </FERMENTABLES>
+  <HOPS>
+    <TOTAL>3.9999967371585194</TOTAL>
+    <ITEM>
+      <HOP>Hallertauer</HOP>
+      <AMOUNT>1.9999983685792597</AMOUNT>
+      <TIME>60</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>4.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Used for: German Ales, German/US/Canadian Lagers, Wheat Beers
+Aroma: Pleasant, mild spicy flavor, clean, neutral flavorSubstitutes: Crystal, Liberty, Hallertauer Mittelfrueh</DESCRIPTION>
+      <DATE>Fri Oct 20 23:46:10 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Styrian Goldings</HOP>
+      <AMOUNT>1.9999983685792597</AMOUNT>
+      <TIME>10</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>4.0</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>A seedless version of Fuggles grown in Slovenia
+Used for: Bittering, finishing for a wide variety of European Beers. Popular in Europe and the United KingdomAroma: Mild, soft, grassy, floral aroma. Similar to Fuggles.
+Substitutes: Fuggles, Williamette</DESCRIPTION>
+      <DATE>Fri Oct 20 23:46:10 CDT 2017</DATE>
+    </ITEM>
+  </HOPS>
+  <MISC>
+    <ITEM>
+      <NAME>Coriander Seed</NAME>
+      <AMOUNT>56.699</AMOUNT>
+      <UNITS>grams</UNITS>
+      <STAGE>Boil</STAGE>
+      <TIME>5</TIME>
+      <COMMENTS></COMMENTS>
+    </ITEM>
+    <ITEM>
+      <NAME>Orange Peel, Bitter</NAME>
+      <AMOUNT>56.699</AMOUNT>
+      <UNITS>grams</UNITS>
+      <STAGE>Boil</STAGE>
+      <TIME>5</TIME>
+      <COMMENTS></COMMENTS>
+    </ITEM>
+  </MISC>
+  <MASH>
+    <NAME>Mash</NAME>
+    <MASH_VOLUME>5.43</MASH_VOLUME>
+    <MASH_VOL_U>gallons US</MASH_VOL_U>
+    <MASH_RATIO>1.25</MASH_RATIO>
+    <MASH_RATIO_U>qt/lb</MASH_RATIO_U>
+    <MASH_TIME>80</MASH_TIME>
+    <MASH_TMP_U>F</MASH_TMP_U>
+    <THICK_DECOCT_RATIO>0.6</THICK_DECOCT_RATIO>
+    <THIN_DECOCT_RATIO>0.9</THIN_DECOCT_RATIO>
+    <MASH_TUNLOSS_TEMP>1.6666666666666665</MASH_TUNLOSS_TEMP>
+    <GRAIN_TEMP>20.0</GRAIN_TEMP>
+    <BOIL_TEMP>100.0</BOIL_TEMP>
+    <ITEM>
+      <TYPE>protein</TYPE>
+      <TEMP>122.0</TEMP>
+      <DISPL_TEMP>122.0</DISPL_TEMP>
+      <END_TEMP>122.0</END_TEMP>
+      <DISPL_END_TEMP>122.0</DISPL_END_TEMP>
+      <MIN>30</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>infusion</METHOD>
+      <WEIGHT_LBS>12.99921557322492</WEIGHT_LBS>
+      <DIRECTIONS>Mash in with 4.1 gallons US of water at 139.3 F</DIRECTIONS>
+    </ITEM>
+    <ITEM>
+      <TYPE>alpha</TYPE>
+      <TEMP>154.00000003999997</TEMP>
+      <DISPL_TEMP>154.00000003999997</DISPL_TEMP>
+      <END_TEMP>154.00000003999997</END_TEMP>
+      <DISPL_END_TEMP>154.00000003999997</DISPL_END_TEMP>
+      <MIN>40</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>Decoction</METHOD>
+      <WEIGHT_LBS>0.0</WEIGHT_LBS>
+      <DIRECTIONS>null</DIRECTIONS>
+    </ITEM>
+    <ITEM>
+      <TYPE>mashout</TYPE>
+      <TEMP>168.00000008</TEMP>
+      <DISPL_TEMP>168.00000008</DISPL_TEMP>
+      <END_TEMP>168.00000008</END_TEMP>
+      <DISPL_END_TEMP>168.00000008</DISPL_END_TEMP>
+      <MIN>10</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>Temperature</METHOD>
+      <WEIGHT_LBS>0.0</WEIGHT_LBS>
+      <DIRECTIONS>null</DIRECTIONS>
+    </ITEM>
+  </MASH>
+   <FERMENTATION_SCHEDULE>
+   </FERMENTATION_SCHEDULE>
+   <CARB>
+      <BOTTLETEMP>68.0</BOTTLETEMP>
+      <SERVTEMP>45.0</SERVTEMP>
+      <VOL>2.4</VOL>
+      <SUGAR></SUGAR>
+      <AMOUNT>1235.7</AMOUNT>
+      <SUGARU>g</SUGARU>
+      <TEMPU>F</TEMPU>
+      <KEG>true</KEG>
+      <PSI>13.72</PSI>
+   </CARB>
+   <WATER_PROFILE>
+      <SOURCE_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </SOURCE_WATER>
+      <TARGET_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </TARGET_WATER>
+      <ACID>
+         <NAME>Citric</NAME>
+         <AMT>0.00</AMT>
+         <ACIDU>mg</ACIDU>
+      </ACID>
+   </WATER_PROFILE>
+  <NOTES>
+  </NOTES>
+ <style>
+  <subcategory id="null">    <name>Witbier</name>
+    <aroma>
+Moderate sweetness (often with light notes of honey and/or vanilla) with light, grainy, spicy wheat aromatics, often with a bit of tartness. Moderate perfumy coriander, often with a complex herbal, spicy, or peppery note in the background. Moderate zesty, orangey fruitiness. A low spicy-herbal hop aroma is optional, but should never overpower the other characteristics. No diacetyl. Vegetal, celery-like, or ham-like aromas from certain types of spices are inappropriate. Spices should blend in with fruity, floral and sweet aromas and should not be overly strong.</aroma>
+    <appearance>
+Very pale straw to very light gold in color. The beer will be very cloudy from starch haze and/or yeast, which gives it a milky, whitish-yellow appearance. Dense, white, moussy head. Head retention should be quite good.</appearance>
+    <flavor>
+Pleasant sweetness (often with a honey and/or vanilla character) and a zesty, orange-citrusy fruitiness. Refreshingly crisp with a dry, often tart, finish. Can have a low wheat flavor. Optionally has a very light lactic-tasting sourness. Herbal-spicy flavors are common but not overpowering, and can taste moderately of coriander and other spices at a more subtle level. A spicy-earthy hop flavor is low to none, and never gets in the way of the spices. Hop bitterness is low to medium-low (as with a Hefeweizen), and doesn't interfere with refreshing flavors of fruit and spice, nor does it persist into the finish. Bitterness from orange pith should not be present. Vegetal, celery-like, ham-like, or soapy flavors from certain types of spices are inappropriate. No diacetyl.</flavor>
+    <mouthfeel>
+Medium-light to medium body, often having a smoothness and light creaminess from unmalted wheat and the occasional oats. Despite body and creaminess, finishes dry and often a bit tart. Effervescent character from high carbonation. Refreshing, from carbonation, light acidity, and lack of bitterness in finish. No harshness or astringency from orange pith. Should not be overly dry and thin, nor should it be thick and heavy.</mouthfeel>
+    <impression>
+A refreshing, elegant, tasty, moderate-strength wheat-based ale.</impression>
+    <comments>
+The presence, character and degree of spicing and lactic sourness varies. Overly spiced and/or sour beers are not good examples of the style. The beer tends to be fragile and does not age well, so younger, fresher, properly handled examples are most desirable.</comments>
+    <ingredients>
+About 50% unmalted wheat (traditionally soft white winter wheat) and 50% pale barley malt (usually pils malt) constitute the grist. In some versions, up to 5-10% raw oats may be used. Spices of freshly-ground coriander and Curaçao or sometimes sweet orange peel complement the sweet aroma and are quite characteristic. Other spices (e.g., chamomile, cumin, cinnamon, Grains of Paradise) may be used for complexity but are much less prominent. Ale yeast prone to the production of mild, spicy flavors is very characteristic. In some instances a very limited lactic fermentation, or the actual addition of lactic acid, is done.</ingredients>
+ <stats>
+  <og flexible="false">
+      <low>1.044</low>
+      <high>1.052</high>
+  </og>
+  <fg flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </fg>
+  <ibu flexible="false">
+      <low>10.0</low>
+      <high>20.0</high>
+  </ibu>
+  <srm flexible="false">
+      <low>2.0</low>
+      <high>4.0</high>
+  </srm>
+  <abv flexible="false">
+      <low>4.5</low>
+      <high>5.5</high>
+  </abv>
+</stats>
+    <examples> ABV of 5% is most typical
+Hoegaarden Wit, Vuuve 5, Blanche de Bruges, Blanche de Bruxelles, Brugs Tarwebier, Sterkens White Ale, Celis White (now made in Michigan), Blanche de Brooklyn, Great Lakes Holy Moses, Unibroue Blanche de Chambly, Blue Moon Belgian White</examples>
+  </subcategory>
+ </style>
+</STRANGEBREWRECIPE>

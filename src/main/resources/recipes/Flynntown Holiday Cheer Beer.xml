@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="http://strangebrewcloud.appspot.com/html/recipeToHtml.xslt"?><STRANGEBREWRECIPE version = "2.1.0">
+<!-- This is a SBJava export.  StrangeBrew 1.8 will not import it. -->
+  <DETAILS>
+  <NAME>Flynntown Holiday Cheer Beer</NAME>
+  <BREWER>Flynntown Brewing Co</BREWER>
+  <NOTES></NOTES>
+  <EFFICIENCY>65.0</EFFICIENCY>
+  <OG>1.074</OG>
+  <FG>1.018</FG>
+  <STYLE>American Pale Ale</STYLE>
+  <MASH>false</MASH>
+  <LOV>11.9</LOV>
+  <IBU>33.5</IBU>
+  <ALC>7.3</ALC>
+  <!-- SBJ1.0 Extensions: -->
+  <EVAP>1.5</EVAP>
+  <EVAP_METHOD>Constant</EVAP_METHOD>
+  <!-- END SBJ1.0 Extensions -->
+  <BOIL_TIME>60</BOIL_TIME>
+  <PRESIZE>40.48996608</PRESIZE>
+  <SIZE>37.854336</SIZE>
+  <SIZE_UNITS>litres</SIZE_UNITS>
+  <MALT_UNITS>pounds</MALT_UNITS>
+  <HOPS_UNITS>ounces</HOPS_UNITS>
+  <YEAST>London Ale Yeast</YEAST>
+  <RECIPE_DATE>10/20/2017</RECIPE_DATE>
+  <ATTENUATION>75.0</ATTENUATION>
+  <!-- SBJ1.0 Extensions: -->
+  <ALC_METHOD>Volume</ALC_METHOD>
+  <IBU_METHOD>Tinseth</IBU_METHOD>
+  <COLOUR_METHOD>SRM</COLOUR_METHOD>
+  <KETTLE_LOSS>0.0</KETTLE_LOSS>
+  <TRUB_LOSS>0.0</TRUB_LOSS>
+  <MISC_LOSS>0.0</MISC_LOSS>
+  <PELLET_HOP_PCT>6.0</PELLET_HOP_PCT>
+  <YEAST_COST>0.0</YEAST_COST>
+  <OTHER_COST>5.0</OTHER_COST>
+  <!-- END SBJ1.0 Extensions -->
+  </DETAILS>
+  <FERMENTABLES>
+    <TOTAL>23.249981034733896</TOTAL>
+    <ITEM>
+      <MALT>Pale Malt (2 Row) US</MALT>
+      <AMOUNT>14.999987764344448</AMOUNT>
+      <PERCENT>64.5</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03634</POINTS>
+      <LOV>2.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Base malt for all beer styles</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Aromatic Malt</MALT>
+      <AMOUNT>3.9999967371585194</AMOUNT>
+      <PERCENT>17.2</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03588</POINTS>
+      <LOV>26.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Provides a very strong malt flavor and aroma to your beer.</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Honey</MALT>
+      <AMOUNT>1.9999983685792597</AMOUNT>
+      <PERCENT>8.6</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0345</POINTS>
+      <LOV>1.0</LOV>
+      <MASHED>false</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Can be used to lighten flavor and body when substituted for malt.
+Generally limit to 30% when used as an adjunct. Pasturize and add to primary during fermentation. Use up to 100% for meads.</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Honey Malt</MALT>
+      <AMOUNT>1.9999983685792597</AMOUNT>
+      <PERCENT>8.6</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.0368</POINTS>
+      <LOV>25.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Intensely sweet - adds a sweet malty flavor sometimes associated with honey.  Also called Brumalt.</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Molasses</MALT>
+      <AMOUNT>0.24999979607240747</AMOUNT>
+      <PERCENT>1.1</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.036018</POINTS>
+      <LOV>80.0</LOV>
+      <MASHED>false</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Imparts a strong, sweet flavor.  Used primarily in stouts and porters.</DESCRIPTION>
+    </ITEM>
+  </FERMENTABLES>
+  <HOPS>
+    <TOTAL>7.999993474317039</TOTAL>
+    <ITEM>
+      <HOP>Cascade</HOP>
+      <AMOUNT>5.999995105737779</AMOUNT>
+      <TIME>60</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Leaf</FORM>
+      <ALPHA>3.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>A hops with Northern Brewers Heritage
+Used for: American ales and lagers
+Aroma: Strong spicy, floral, grapefruit character
+Substitutes: Centennial
+Examples: Sierra Nevada Pale Ale, Anchor Liberty Ale</DESCRIPTION>
+      <DATE>Fri Oct 20 23:44:55 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Cascade</HOP>
+      <AMOUNT>1.9999983685792597</AMOUNT>
+      <TIME>10</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Leaf</FORM>
+      <ALPHA>3.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>A hops with Northern Brewers Heritage
+Used for: American ales and lagers
+Aroma: Strong spicy, floral, grapefruit character
+Substitutes: Centennial
+Examples: Sierra Nevada Pale Ale, Anchor Liberty Ale</DESCRIPTION>
+      <DATE>Fri Oct 20 23:44:55 CDT 2017</DATE>
+    </ITEM>
+  </HOPS>
+  <MISC>
+    <ITEM>
+      <NAME>Allspice</NAME>
+      <AMOUNT>29.573999999999998</AMOUNT>
+      <UNITS>grams</UNITS>
+      <STAGE>Boil</STAGE>
+      <TIME>10</TIME>
+      <COMMENTS></COMMENTS>
+    </ITEM>
+  </MISC>
+  <MASH>
+    <NAME>Mash</NAME>
+    <MASH_VOLUME>8.77</MASH_VOLUME>
+    <MASH_VOL_U>gallons US</MASH_VOL_U>
+    <MASH_RATIO>1.25</MASH_RATIO>
+    <MASH_RATIO_U>qt/lb</MASH_RATIO_U>
+    <MASH_TIME>60</MASH_TIME>
+    <MASH_TMP_U>C</MASH_TMP_U>
+    <THICK_DECOCT_RATIO>0.6</THICK_DECOCT_RATIO>
+    <THIN_DECOCT_RATIO>0.9</THIN_DECOCT_RATIO>
+    <MASH_TUNLOSS_TEMP>1.6666666666666665</MASH_TUNLOSS_TEMP>
+    <GRAIN_TEMP>20.0</GRAIN_TEMP>
+    <BOIL_TEMP>100.0</BOIL_TEMP>
+    <ITEM>
+      <TYPE>alpha</TYPE>
+      <TEMP>152.00000006</TEMP>
+      <DISPL_TEMP>66.7</DISPL_TEMP>
+      <END_TEMP>152.00000006</END_TEMP>
+      <DISPL_END_TEMP>66.7</DISPL_END_TEMP>
+      <MIN>60</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>infusion</METHOD>
+      <WEIGHT_LBS>20.999982870082228</WEIGHT_LBS>
+      <DIRECTIONS>Mash in with 6.6 gallons US of water at 76.8 C</DIRECTIONS>
+    </ITEM>
+  </MASH>
+   <FERMENTATION_SCHEDULE>
+   </FERMENTATION_SCHEDULE>
+   <CARB>
+      <BOTTLETEMP>68.0</BOTTLETEMP>
+      <SERVTEMP>45.0</SERVTEMP>
+      <VOL>2.4</VOL>
+      <SUGAR></SUGAR>
+      <AMOUNT>296.8</AMOUNT>
+      <SUGARU>g</SUGARU>
+      <TEMPU>F</TEMPU>
+      <KEG>true</KEG>
+      <PSI>13.72</PSI>
+   </CARB>
+   <WATER_PROFILE>
+      <SOURCE_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </SOURCE_WATER>
+      <TARGET_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </TARGET_WATER>
+      <ACID>
+         <NAME>Citric</NAME>
+         <AMT>0.00</AMT>
+         <ACIDU>mg</ACIDU>
+      </ACID>
+   </WATER_PROFILE>
+  <NOTES>
+  </NOTES>
+ <style>
+  <subcategory id="null">    <name>American Pale Ale</name>
+    <aroma>
+Usually moderate to strong hop aroma from dry hopping or late kettle additions of American hop varieties. A citrusy hop character is very common, but not required. Low to moderate maltiness supports the hop presentation, and may optionally show small amounts of specialty malt character (bready, toasty, biscuity). Fruity esters vary from moderate to none. No diacetyl. Dry hopping (if used) may add grassy notes, although this character should not be excessive.</aroma>
+    <appearance>
+Pale golden to deep amber. Moderately large white to off-white head with good retention. Generally quite clear, although dry-hopped versions may be slightly hazy.</appearance>
+    <flavor>
+Usually a moderate to high hop flavor, often showing a citrusy American hop character (although other hop varieties may be used). Low to moderately high clean malt character supports the hop presentation, and may optionally show small amounts of specialty malt character (bready, toasty, biscuity). The balance is typically towards the late hops and bitterness, but the malt presence can be substantial. Caramel flavors are usually restrained or absent. Fruity esters can be moderate to none. Moderate to high hop bitterness with a medium to dry finish. Hop flavor and bitterness often lingers into the finish. No diacetyl. Dry hopping (if used) may add grassy notes, although this character should not be excessive.</flavor>
+    <mouthfeel>
+Medium-light to medium body. Carbonation moderate to high. Overall smooth finish without astringency often associated with high hopping rates.</mouthfeel>
+    <impression>
+Refreshing and hoppy, yet with sufficient supporting malt.</impression>
+    <comments>
+There is some overlap in color between American pale ale and American amber ale. The American pale ale will generally be cleaner, have a less caramelly malt profile, less body, and often more finishing hops.</comments>
+    <ingredients>
+Pale ale malt, typically American two-row. American hops, often but not always ones with a citrusy character. American ale yeast. Water can vary in sulfate content, but carbonate content should be relatively low. Specialty grains may add character and complexity, but generally make up a relatively small portion of the grist. Grains that add malt flavor and richness, light sweetness, and toasty or bready notes are often used (along with late hops) to differentiate brands.</ingredients>
+ <stats>
+  <og flexible="false">
+      <low>1.045</low>
+      <high>1.06</high>
+  </og>
+  <fg flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </fg>
+  <ibu flexible="false">
+      <low>30.0</low>
+      <high>45.0</high>
+  </ibu>
+  <srm flexible="false">
+      <low>5.0</low>
+      <high>14.0</high>
+  </srm>
+  <abv flexible="false">
+      <low>4.5</low>
+      <high>6.0</high>
+  </abv>
+</stats>
+    <examples>
+Sierra Nevada Pale Ale, Stone Pale Ale, Great Lakes Burning River Pale Ale, Full Sail Pale Ale, Three Floyds X-Tra Pale Ale, Anderson Valley Poleeko Gold Pale Ale, Left Hand Brewing Jackman's Pale Ale, Pyramid Pale Ale, Deschutes Mirror Pond</examples>
+  </subcategory>
+ </style>
+</STRANGEBREWRECIPE>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="http://strangebrewcloud.appspot.com/html/recipeToHtml.xslt"?><STRANGEBREWRECIPE version = "2.1.0">
+<!-- This is a SBJava export.  StrangeBrew 1.8 will not import it. -->
+  <DETAILS>
+  <NAME>Flynntown Rye</NAME>
+  <BREWER>Flynntown Brewing Co</BREWER>
+  <NOTES></NOTES>
+  <EFFICIENCY>70.0</EFFICIENCY>
+  <OG>1.055</OG>
+  <FG>1.014</FG>
+  <STYLE>American Wheat or Rye Beer</STYLE>
+  <MASH>false</MASH>
+  <LOV>5.4</LOV>
+  <IBU>23.5</IBU>
+  <ALC>5.4</ALC>
+  <!-- SBJ1.0 Extensions: -->
+  <EVAP>1.5</EVAP>
+  <EVAP_METHOD>Constant</EVAP_METHOD>
+  <!-- END SBJ1.0 Extensions -->
+  <BOIL_TIME>60</BOIL_TIME>
+  <PRESIZE>40.48996608</PRESIZE>
+  <SIZE>37.854336</SIZE>
+  <SIZE_UNITS>litres</SIZE_UNITS>
+  <MALT_UNITS>pounds</MALT_UNITS>
+  <HOPS_UNITS>ounces</HOPS_UNITS>
+  <YEAST>German Lager</YEAST>
+  <RECIPE_DATE>10/20/2017</RECIPE_DATE>
+  <ATTENUATION>75.0</ATTENUATION>
+  <!-- SBJ1.0 Extensions: -->
+  <ALC_METHOD>Volume</ALC_METHOD>
+  <IBU_METHOD>Tinseth</IBU_METHOD>
+  <COLOUR_METHOD>SRM</COLOUR_METHOD>
+  <KETTLE_LOSS>0.0</KETTLE_LOSS>
+  <TRUB_LOSS>0.0</TRUB_LOSS>
+  <MISC_LOSS>0.0</MISC_LOSS>
+  <PELLET_HOP_PCT>6.0</PELLET_HOP_PCT>
+  <YEAST_COST>0.0</YEAST_COST>
+  <OTHER_COST>5.0</OTHER_COST>
+  <!-- END SBJ1.0 Extensions -->
+  </DETAILS>
+  <FERMENTABLES>
+    <TOTAL>21.74998225829945</TOTAL>
+    <ITEM>
+      <MALT>Pilsner (2 Row) Ger</MALT>
+      <AMOUNT>12.999989395765189</AMOUNT>
+      <PERCENT>59.8</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03726</POINTS>
+      <LOV>2.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>German base for Pilsners and Bohemian Lagers</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Rye Malt</MALT>
+      <AMOUNT>4.249996533230927</AMOUNT>
+      <PERCENT>19.5</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.02898</POINTS>
+      <LOV>4.7</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Adds a dry, crisp character to the beer.  
+Yields a deep red color, and a distinctive rye flavor
+Must limit to 10-15% fo the mash as it tends to produce &quot;stuck&quot; mashes.</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Wheat Malt, Ger</MALT>
+      <AMOUNT>3.9999967371585194</AMOUNT>
+      <PERCENT>18.4</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03864</POINTS>
+      <LOV>2.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Malted wheat base for use in all wheat styles</DESCRIPTION>
+    </ITEM>
+    <ITEM>
+      <MALT>Biscuit Malt</MALT>
+      <AMOUNT>0.49999959214481493</AMOUNT>
+      <PERCENT>2.3</PERCENT>
+      <UNITS>lb</UNITS>
+      <POINTS>1.03634</POINTS>
+      <LOV>23.0</LOV>
+      <MASHED>true</MASHED>
+      <STEEPED>false</STEEPED>
+      <FERMENTS>true</FERMENTS>
+      <COSTLB>0.0</COSTLB>
+      <DESCRIPTION>Use for English ales, brown ales and porters.
+Adds a biscuit like flavor and aroma.
+Can be used as a substitute for toasted malt.</DESCRIPTION>
+    </ITEM>
+  </FERMENTABLES>
+  <HOPS>
+    <TOTAL>3.9999967371585194</TOTAL>
+    <ITEM>
+      <HOP>Tettnang</HOP>
+      <AMOUNT>0.9999991842896299</AMOUNT>
+      <TIME>60</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>4.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Used for: German ales, lagers and wheat beer
+Aroma: Noble, mild, fine, slightly spicy
+Substitutes: Saaz, Spalt
+Examples: Sam Adams Octoberfest, Anderson Valley ESB</DESCRIPTION>
+      <DATE>Fri Oct 20 23:45:49 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Spalter</HOP>
+      <AMOUNT>0.9999991842896299</AMOUNT>
+      <TIME>60</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>4.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Used for: Traditional German bittering and aroma hops, Altbiers, Lagers
+Aroma: Mild, pleasant, slight spice
+Substitutes: Saaz, Tettnang
+Examples: Dusseldorf Altbiers</DESCRIPTION>
+      <DATE>Fri Oct 20 23:45:49 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Tettnang</HOP>
+      <AMOUNT>0.9999991842896299</AMOUNT>
+      <TIME>15</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>4.5</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Used for: German ales, lagers and wheat beer
+Aroma: Noble, mild, fine, slightly spicy
+Substitutes: Saaz, Spalt
+Examples: Sam Adams Octoberfest, Anderson Valley ESB</DESCRIPTION>
+      <DATE>Fri Oct 20 23:45:49 CDT 2017</DATE>
+    </ITEM>
+    <ITEM>
+      <HOP>Hallertauer Hersbrucker</HOP>
+      <AMOUNT>0.9999991842896299</AMOUNT>
+      <TIME>15</TIME>
+      <UNITS>oz</UNITS>
+      <FORM>Pellet</FORM>
+      <ALPHA>4.0</ALPHA>
+      <COSTOZ>0.0</COSTOZ>
+      <ADD>Boil</ADD>
+      <DESCRIPTION>Used for: German style lagers and wheat beers
+Aroma: Noble, pleasant, clean flavor
+Substitutes: Mt. Hood, Liberty, Hallertauer, Mittelfrueh
+Examples: Wheathook Wheaten Ale</DESCRIPTION>
+      <DATE>Fri Oct 20 23:45:49 CDT 2017</DATE>
+    </ITEM>
+  </HOPS>
+  <MISC>
+  </MISC>
+  <MASH>
+    <NAME>Mash</NAME>
+    <MASH_VOLUME>9.08</MASH_VOLUME>
+    <MASH_VOL_U>gallons US</MASH_VOL_U>
+    <MASH_RATIO>1.25</MASH_RATIO>
+    <MASH_RATIO_U>qt/lb</MASH_RATIO_U>
+    <MASH_TIME>60</MASH_TIME>
+    <MASH_TMP_U>C</MASH_TMP_U>
+    <THICK_DECOCT_RATIO>0.6</THICK_DECOCT_RATIO>
+    <THIN_DECOCT_RATIO>0.9</THIN_DECOCT_RATIO>
+    <MASH_TUNLOSS_TEMP>1.6666666666666665</MASH_TUNLOSS_TEMP>
+    <GRAIN_TEMP>20.0</GRAIN_TEMP>
+    <BOIL_TEMP>100.0</BOIL_TEMP>
+    <ITEM>
+      <TYPE>alpha</TYPE>
+      <TEMP>152.00000006</TEMP>
+      <DISPL_TEMP>66.7</DISPL_TEMP>
+      <END_TEMP>152.00000006</END_TEMP>
+      <DISPL_END_TEMP>66.7</DISPL_END_TEMP>
+      <MIN>60</MIN>
+      <RAMP_MIN>0</RAMP_MIN>
+      <METHOD>infusion</METHOD>
+      <WEIGHT_LBS>21.74998225829945</WEIGHT_LBS>
+      <DIRECTIONS>Mash in with 6.8 gallons US of water at 76.8 C</DIRECTIONS>
+    </ITEM>
+  </MASH>
+   <FERMENTATION_SCHEDULE>
+   </FERMENTATION_SCHEDULE>
+   <CARB>
+      <BOTTLETEMP>68.0</BOTTLETEMP>
+      <SERVTEMP>45.0</SERVTEMP>
+      <VOL>2.4</VOL>
+      <SUGAR></SUGAR>
+      <AMOUNT>296.8</AMOUNT>
+      <SUGARU>g</SUGARU>
+      <TEMPU>F</TEMPU>
+      <KEG>true</KEG>
+      <PSI>13.72</PSI>
+   </CARB>
+   <WATER_PROFILE>
+      <SOURCE_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </SOURCE_WATER>
+      <TARGET_WATER>
+         <NAME>Distilled/RO</NAME>
+         <CA>0.0</CA>
+         <MG>0.0</MG>
+         <NA>0.0</NA>
+         <SO4>0.0</SO4>
+         <HCO3>0.0</HCO3>
+         <CL>0.0</CL>
+         <HARDNESS>0.0</HARDNESS>
+         <TDS>0.0</TDS>
+         <PH>5.80000019073486</PH>
+         <ALKALINITY>0.0</ALKALINITY>
+      </TARGET_WATER>
+      <ACID>
+         <NAME>Citric</NAME>
+         <AMT>0.00</AMT>
+         <ACIDU>mg</ACIDU>
+      </ACID>
+   </WATER_PROFILE>
+  <NOTES>
+  </NOTES>
+ <style>
+  <subcategory id="null">    <name>American Wheat or Rye Beer</name>
+    <aroma>
+Low to moderate grainy wheat or rye character. Some malty sweetness is acceptable. Esters can be moderate to none, although should reflect American yeast strains. The clovey and banana aromas common to</aroma>
+    <appearance>
+Usually pale yellow to gold. Clarity may range from brilliant to hazy with yeast approximating the</appearance>
+    <flavor>
+Light to moderately strong grainy wheat or rye flavor, which can linger into the finish. May have a moderate malty sweetness or finish quite dry. Low to moderate hop bitterness, which sometimes lasts into the finish. Low to moderate hop flavor (citrusy American or spicy/floral noble). Esters can be moderate to none, but should not take on a German Hefeweizen character (banana). No clove phenols, although a light spiciness from wheat or rye is acceptable. May have a slight tartness in the finish. No diacetyl.</flavor>
+    <mouthfeel>
+Medium-light to medium body. Medium-high to high carbonation. May have a light alcohol warmth in stronger examples.</mouthfeel>
+    <impression>
+Refreshing wheat or rye beers that can display more hop character and less yeast character than their German cousins.</impression>
+    <comments>
+Different variations exist, from an easy-drinking fairly sweet beer to a dry, aggressively hopped beer with a strong wheat or rye flavor. Dark versions approximating dunkelweizens are acceptable (and can have some darker, richer malt flavors in addition to the color). THE BREWER SHOULD SPECIFY IF RYE IS USED; IF NO DOMINANT GRAIN IS SPECIFIED, WHEAT WILL BE ASSUMED.</comments>
+    <ingredients>
+Clean American ale yeast, but also can be made as a lager. Large proportion of wheat malt (often 50% or more, but this isn't a legal requirement as in Germany). American or noble hops. American Rye Beers can follow the same general guidelines, substituting rye for some or all of the wheat. Other base styles (e.g., IPA, stout) with a noticeable rye character should be entered in the specialty character.</ingredients>
+ <stats>
+  <og flexible="false">
+      <low>1.04</low>
+      <high>1.055</high>
+  </og>
+  <fg flexible="false">
+      <low>0.0</low>
+      <high>0.0</high>
+  </fg>
+  <ibu flexible="false">
+      <low>15.0</low>
+      <high>30.0</high>
+  </ibu>
+  <srm flexible="false">
+      <low>3.0</low>
+      <high>6.0</high>
+  </srm>
+  <abv flexible="false">
+      <low>4.0</low>
+      <high>5.5</high>
+  </abv>
+</stats>
+    <examples>
+Bell's Oberon, Anchor Summer Beer, Pyramid Hefe-Weizen, Harpoon UFO Hefeweizen, Widmer Hefeweizen, Sierra Nevada Unfiltered Wheat Beer, Anderson Valley High Rollers Wheat Beer, Redhook Sunrye, O'Hanlon's Original Rye Beer</examples>
+  </subcategory>
+ </style>
+</STRANGEBREWRECIPE>
